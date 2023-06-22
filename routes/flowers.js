@@ -4,8 +4,8 @@ var router = express.Router();
 const flowerCtrl = require('../controllers/flowers')
 
 
-
-
+// PUT takes data from the edit page and actually updates it
+router.put('/:id', flowerCtrl.update)
 
 // Delete functionality on Index page
 router.delete('/:id', flowerCtrl.delete)

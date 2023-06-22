@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
 <h2>Edit page for flowers</h2>
 
-<form action="/flowers/<%= flower.id %>_method=PUT"  method="POST">
-   <label>Name:</label><input name="name">
-   <label>Amount:</label><input name="amount">
-   <label>Zone:</label><input name="zone">
-   <button type="submit">Submit Order</button>
+<form action="/flowers/<%= flower.id %>?_method=PUT"  method="POST">
+   <label>Name:</label><input name="name" value="<%= flower.name %>">
+   <label>Amount:</label><input name="amount" value="<%= flower.amount %>">
+   <label>Zone:</label><input name="zone" value="<%= flower.zone %>">
+   <button type="submit">Save Changes</button>
 </form>
 
 <%- include('../partials/footer') %>

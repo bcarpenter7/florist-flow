@@ -7,7 +7,29 @@ module.exports = {
     new: newFlower,
     create,
     delete: deleteFlower,
-    edit
+    edit,
+    update
+}
+
+async function update(req, res){
+    const flower = await Flower.findById(req.params.id)
+    try {
+        const flowerId = req.params.id
+        const flowerBody = req.body
+
+        await Flower.findByIdAndUpdate(flowerId, flowerBody)
+        /// Takes id to find it, req.body is what it is updating
+        res.redirect(`/flowers/${flowerId}`)
+    } catch(err) {
+        console.log(err)
+        res.render('flowers/edit', {
+			flower,
+			message: 'You made an error',
+			error: 'ERROR',
+			title: 'error',
+			errorMsg: err.message
+		})
+    }
 }
 
 async function edit(req, res){
@@ -44,7 +66,6 @@ async function create(req, res){
 		})
     }
 }
-
 
 
 function newFlower(req, res){
