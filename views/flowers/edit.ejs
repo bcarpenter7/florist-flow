@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
-<h2>New page for all flowers</h2>
+<h2>Edit page for flowers</h2>
 
-<form action="/flowers"  method="POST">
+<form action="/flowers/<%= flower.id %>_method=PUT"  method="POST">
    <label>Name:</label><input name="name">
    <label>Amount:</label><input name="amount">
    <label>Zone:</label><input name="zone">

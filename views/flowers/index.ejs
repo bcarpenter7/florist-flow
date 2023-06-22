@@ -1,4 +1,17 @@
 <%- include('../partials/header') %>
 <h2>index page for all flowers</h2>
-<h2><%= flowers[0].name %></h2>
+
+
+
+<% flowers.forEach(f => { %>
+    <h2><%= f.name %></h2>
+    <h2><%= f.amount %></h2>
+    <h2><%= f.zone %></h2>
+    <a href="/flowers/<%= f.id %>/edit">Edit</a>
+    <form action="/flowers/<%=f.id%>?_method=DELETE" method="POST">
+        <button type="submit">X</button>
+    </form>
+<% }) %> 
+
+
 <%- include('../partials/footer') %>

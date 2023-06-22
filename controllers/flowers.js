@@ -4,7 +4,56 @@ const Flower = require('../models/flower')
 module.exports = {
     index,
     show,
+    new: newFlower,
+    create,
+    delete: deleteFlower,
+    edit
 }
+
+async function edit(req, res){
+    const flower = await Flower.findById(req.params.id)
+    const context = {
+        flower,
+        errorMsg: "not working"
+    }
+    res.render('flowers/edit', context)
+}
+
+async function deleteFlower(req, res){
+    try {
+        await Flower.findByIdAndDelete(req.params.id)
+        res.redirect('/flowers')
+    } catch(err) {
+        console.log(err)
+        res.render('error', {
+			title: 'error',
+			errorMsg: err.message
+		})
+    }
+}
+
+
+async function create(req, res){
+    try {
+        await Flower.create(req.body)
+        res.redirect('/flowers')
+    } catch(err) {
+        res.render('flowers/new', {
+			title: 'error',
+			errorMsg: err
+		})
+    }
+}
+
+
+
+function newFlower(req, res){
+    res.render('flowers/new', {
+        errorMsg: '',
+        title: 'New Flower'
+    })
+}
+
 
 async function index(req, res){
     const flowersAll = await Flower.find({})
@@ -16,6 +65,7 @@ async function index(req, res){
     console.log(flowersAll[0].name)
     res.render('flowers/index', context)
 }
+
 
 async function show(req, res){
     try {
