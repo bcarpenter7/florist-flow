@@ -32,10 +32,10 @@
          </div>
 <% x++ %>
 <% } %>
-
+   <div id="btnDiv">
    <button id="btnAdd">Add More</button>
    <button id="btnRemove">Remove</button>
-
+   </div>
 
    <script>
       let btn = document.getElementById('btnAdd')
@@ -66,23 +66,15 @@
 
       btn.addEventListener('click', clicked )
       
-/// Working
+   /// Remove Btn
 
-let btnRemove = document.getElementById('btnRemove')
-   // let x = 4;
+   let btnRemove = document.getElementById('btnRemove')
    const clickedRemove = function(e){
-      // let val = document.getElementById('unique').value
       e.preventDefault()
-      // y = val;
-      // console.log(x)
-      
       document.getElementById(`${x}`).remove()
       x--
    }
-
    btnRemove.addEventListener('click', clickedRemove )
-   
-
    </script>
 
 
