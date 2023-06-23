@@ -1,43 +1,92 @@
 <%- include('../partials/header') %>
 
 
+
 <form id="newFlowerForm" action="/flowers"  method="POST">
    <h2>Create Your Bouquet</h2>
    <label>Name of Client:</label><input type="text" name="name">
    <label>Date of Wedding:</label><input type="date" name="dateOfWedding">
+   <!-- <label>Number of Unique Flowers:</label><input type="number" name="unique" id="unique"> -->
 
-   <div class="flex">
-   <label>Flower #1 Name:</label>
-   <select name="flowerName">
-        <option value="Rose">Rose</option>
-        <option value="Hydrangea">Hydrangea</option>
-        <option value="Mum">Mum</option>
-        <option value="Dahlia">Dahlia</option>
-   </select>
-   <label>Flower #1 Amount:</label><input type="number" name="flowerAmount">
-   </div>
 
-   <div class="flex">
-   <label>Flower #2 Name:</label>
-   <select name="flowerName">
-        <option value="Rose">Rose</option>
-        <option value="Hydrangea">Hydrangea</option>
-        <option value="Mum">Mum</option>
-        <option value="Dahlia">Dahlia</option>
-   </select>
-   <label>Flower #2 Amount:</label><input type="number" name="flowerAmount">
-   </div>
+   
+   <% let x = 1; %>
+   <% let y = 2 %>
+   <script>
+   if(!y) {
+      y = 2; 
+   } 
+   </script>
 
-   <div class="flex">
-   <label>Flower #3 Name:</label>
-   <select name="flowerName">
-        <option value="Rose">Rose</option>
-        <option value="Hydrangea">Hydrangea</option>
-        <option value="Mum">Mum</option>
-        <option value="Dahlia">Dahlia</option>
-   </select>
-   <label>Flower #3 Amount:</label><input type="number" name="flowerAmount">
-   </div>
+   <% while(x < 5) {  %>
+      <div class="flex">
+         <label>Flower #<%= x %> Name:</label>
+         <select name="flowerName">
+              <option value=""></option>
+              <option value="Rose">Rose</option>
+              <option value="Hydrangea">Hydrangea</option>
+              <option value="Mum">Mum</option>
+              <option value="Dahlia">Dahlia</option>
+         </select>
+         <label>Flower #<%= x %> Amount:</label><input type="number" name="flowerAmount">
+         </div>
+<% x++ %>
+<% } %>
+
+   <button id="btnAdd">Add More</button>
+   <button id="btnRemove">Remove</button>
+
+
+   <script>
+      let btn = document.getElementById('btnAdd')
+      let x = 4;
+      const clicked = function(e){
+         // let val = document.getElementById('unique').value
+         e.preventDefault()
+         // y = val;
+         console.log(x)
+         x++
+         let html = `
+         <div class="flex" id="${x}">
+            <label>Flower #${x} Name:</label>
+               <select name="flowerName">
+                  <option value=""></option>
+                  <option value="Rose">Rose</option>
+                  <option value="Hydrangea">Hydrangea</option>
+                  <option value="Mum">Mum</option>
+                  <option value="Dahlia">Dahlia</option>
+               </select>
+            <label>Flower #${x} Amount:</label><input type="number" name="flowerAmount">
+         </div>
+      <% x++ %>
+   `
+         btn.insertAdjacentHTML("beforebegin", html)
+      }
+
+
+      btn.addEventListener('click', clicked )
+      
+/// Working
+
+let btnRemove = document.getElementById('btnRemove')
+   // let x = 4;
+   const clickedRemove = function(e){
+      // let val = document.getElementById('unique').value
+      e.preventDefault()
+      // y = val;
+      // console.log(x)
+      
+      document.getElementById(`${x}`).remove()
+      x--
+   }
+
+   btnRemove.addEventListener('click', clickedRemove )
+   
+
+   </script>
+
+
+ 
 
    <div class="flex">
       <label>Greenery #1 Name:</label>

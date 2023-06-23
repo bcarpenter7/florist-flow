@@ -5,10 +5,14 @@
    <label>Name of Client:</label><input type="text" name="name" value="<%= flower.name %>">
    <label>Original Date of Wedding:</label><input value="<%=flower.dateOfWedding %>">
    <label>New Date of Wedding:</label><input type="date" name="dateOfWedding" value="<%=flower.dateOfWedding %>">
-   <label>Flower #1 Name:</label><input type="text" name="flowerOneName" value="<%=flower.flowerOneName %>">
-   <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount" value="<%=flower.flowerOneAmount %>">
-   <label>Greenery #1 Name:</label><input type="text" name="greensOneName" value="<%=flower.greensOneName %>">
-   <label>Greenery #1 Amount:</label><input type="number" name="greensOneAmount" value="<%=flower.greensOneAmount %>">
+
+
+   <label>Flower #1 Name:</label><input type="text" name="flowerOneName" value="<%=flower.flowerName %>">
+   <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount" value="<%=flower.flowerAmount %>">
+   <label>Greenery #1 Name:</label><input type="text" name="greensOneName" value="<%=flower.greenName %>">
+   <label>Greenery #1 Amount:</label><input type="number" name="greensOneAmount" value="<%=flower.greenAmount %>">
+
+
    <!-- <a href="/flowers/<%= flower.id %>">View Wedding</a> -->
    <button type="submit" id="newBtn">Save Changes</button>
 </form>

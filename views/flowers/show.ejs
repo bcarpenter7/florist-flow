@@ -26,13 +26,14 @@
         <label><span class="showTitles">Greenery #1 Name:</span> <%=flower.greensOneName %></label>
         <label><span class="showTitles">Greenery #1 Amount:</span> <%=flower.greensOneAmount %></label> -->
             <% let total = 0; %>
-        <table>
+        <table id="priceBreakdownTable">
             <tr>
               <th>Selection</th>
               <th>Plant Name</th>
-              <th>Amount</th>
+              <th>Per Stem Amount</th>
               <th>Price Per Stem</th>
-              <th>Total</th>
+              <th>Total Per Stem</th>
+              <th>Bundles Needed</th>
             </tr>
 
             <% flower.flowerName.forEach((f, i) => {  %>
@@ -40,9 +41,9 @@
                 <tr>
                     <td><span class="showTitles">Flower #<%= i + 1 %></span></td>
                     <td><%=f %></td>
-                    <td><%=flower.flowerAmount[i] %></td>
-                    <td><%= curPrice %></td>   
-                    <td><%=flower.flowerAmount[i] * curPrice %> <% total+= flower.flowerAmount[i] * curPrice %></td>
+                    <td class="centerText"><%=flower.flowerAmount[i] %></td>
+                    <td class="centerText"><%= curPrice %></td>   
+                    <td class="centerText"><%=flower.flowerAmount[i] * curPrice %> <% total+= flower.flowerAmount[i] * curPrice %></td>
                 </tr>
 
            <% }) %>
