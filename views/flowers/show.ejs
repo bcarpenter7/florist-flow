@@ -1,11 +1,21 @@
 <%- include('../partials/header') %>
     <div id="showDiv">
-        <h2>Show page for one flower</h2>
+        <h2>View Order: <span><%= flower.name %></span></h2>
+        <label>Name: <%=flower.name %></label>
+        <label>Date of Wedding: <%=flower.dateOfWedding %></label>
+        <label>Flower #1: <%=flower.flowerOneName %></label>
+        <label>Flower #1 Amount: <%=flower.flowerOneAmount %></label>
+        <label>Greenery #1 Name: <%=flower.greensOneName %></label>
+        <label>Greenery #1 Amount: <%=flower.greensOneAmount %></label>
+        <a href="/flowers/<%= flower.id %>/edit">Edit Wedding Details</a>
+    </div>
+    <div id="priceDiv">
+        <h2>Price Breakdown</h2>
         <label>Date of Wedding:<%=flower.dateOfWedding %>"</label>
         <label>Flower #1 Name:<%=flower.flowerOneName %>"</label>
         <label>Flower #1 Amount:<%=flower.flowerOneAmount %>"</label>
         <label>Greenery #1 Name:<%=flower.greensOneName %>"</label>
         <label>Greenery #1 Amount:<%=flower.greensOneAmount %>"</label>
-        <a href="/flowers/<%= flower.id %>/edit">Edit Wedding Details</a>
+       
     </div>
 <%- include('../partials/footer') %>
