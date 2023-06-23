@@ -13,17 +13,27 @@
             
             <a href="/flowers/<%= f.id %>/edit">Edit</a>
         </div>
-
+        
         <h2 class="indexAllLabel">Client Name: <span><%= f.name %></span></h2>
         <h2 class="indexAllLabel">Date of Wedding: <span><%= f.dateOfWedding %></span></h2>
-        <h2 class="indexAllLabel">Flower #1 Name: 
-            <span><%= f.flowerName %></span>
+       
+        <!-- NOT SURE IF I WANT TO INCLUDE DATA ON FLOWERS ON THIS PAGE
+            <h2 class="indexAllLabel">Flowers:  
+            <span>
+                <% f.flowerName.forEach(f => { %>
+                <%= f %>,
+            <% }) %>
+            </span>
             <span> (<%= f.flowerAmount %>)</span>
         </h2>
-        <h2 class="indexAllLabel">Greenery #1 Name: 
-            <span><%= f.greenName %></span>
-            <span> (<%= f.greenAmount %>)</span>
+        <h2 class="indexAllLabel">Greens: 
+            <span>
+                <% f.greenName.forEach(g => { %>
+                <%= g %>,
+            <% }) %>
+            </span>
         </h2>
+        -->
         <a id="viewWedding" href="/flowers/<%= f.id %>">View Wedding</a>
         
     </div>
