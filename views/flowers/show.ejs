@@ -6,6 +6,7 @@
     <div id="showDiv">
         <label><span class="showTitles">Name:</span> <%=flower.name %></label>
         <label><span class="showTitles">Date of Wedding:</span> <%=flower.dateOfWedding %></label>
+        <label><span class="showTitles">Location:</span> <%=flower.location %></label>
 
         <% flower.flowerName.forEach((f, i) => {  %>
         <label><span class="showTitles">Flower #<%= i + 1%>:</span> <%=f %> (<%=flower.flowerAmount[i]  %>)</label>
@@ -38,8 +39,8 @@
                     <td><span class="showTitles">Flower #<%= i + 1 %></span></td>
                     <td><%=f %></td>
                     <td class="centerText"><%=flower.flowerAmount[i] %></td>
-                    <td class="centerText"><%= curPrice %></td>   
-                    <td class="centerText"><%=flower.flowerAmount[i] * curPrice %> <% total+= flower.flowerAmount[i] * curPrice %></td>
+                    <td class="centerText">$<%= curPrice %></td>   
+                    <td class="centerText">$<%=flower.flowerAmount[i] * curPrice %> <% total+= flower.flowerAmount[i] * curPrice %></td>
                 </tr>
            <% }) %>
 
@@ -49,8 +50,8 @@
                 <td><span class="showTitles">Green #<%= i + 1 %></span></td>
                 <td><%=g %></td>
                 <td class="centerText"><%=flower.greenAmount[i] %></td>
-                <td class="centerText"><%= curPriceGreen %></td>   
-                <td class="centerText"><%=flower.greenAmount[i] * curPriceGreen %> <% total+= flower.greenAmount[i] * curPriceGreen %></td>
+                <td class="centerText">$<%= curPriceGreen %></td>   
+                <td class="centerText">$<%=flower.greenAmount[i] * curPriceGreen %> <% total+= flower.greenAmount[i] * curPriceGreen %></td>
             </tr>
        <% }) %>
         </table>

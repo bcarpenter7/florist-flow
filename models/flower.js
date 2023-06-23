@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const flowerSchema = new Schema({
     name: String,
     dateOfWedding: Date,
+    location: String,
     flowerName: [{type: String, enum: ["Rose", "Hydrangea", "Dahlia", "Mum"]}],
     flowerAmount: [{type: Number, min: 1, max: 99}],
     greenName: [{type: String, enum: ["Ivy", "Dusty Miller"]}],

@@ -6,9 +6,10 @@
    <h2>Create Your Bouquet</h2>
    <label>Name of Client:</label><input type="text" name="name">
    <label>Date of Wedding:</label><input type="date" name="dateOfWedding">
+   <label>Location:</label><input type="text" name="location">
    <% let x = 1; %>
 
-   <% while(x < 5) {  %>
+   <% while(x < 4) {  %>
       <div class="flex">
          <label>Flower #<%= x %> Name:</label>
          <select name="flowerName">
@@ -30,7 +31,7 @@
 
    <script>
       let btn = document.getElementById('btnAddFlower')
-      let x = 4;
+      let x = 3;
       const clicked = function(e){
          // let val = document.getElementById('unique').value
          e.preventDefault()
