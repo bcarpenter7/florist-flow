@@ -38,12 +38,16 @@
             <% console.log(flower.flowerName) %>
             <% flower.flowerName.forEach((f, i) => {  %>
                 <% let curPrice = price.find((e) => e.plantName === f).price %>
+                <% let bundle = price.find((e) => e.plantName === f).bundle %>
+                <% let perStem = curPrice / bundle %>
+                <% let allStems = flower.flowerAmount[i] * perStem %>
+                <% total+= allStems %>
                 <tr>
                     <td><span class="showTitles">Flower #<%= i + 1 %></span></td>
                     <td><%=f %></td>
                     <td class="centerText"><%=flower.flowerAmount[i] %></td>
-                    <td class="centerText">$<%= curPrice %></td>   
-                    <td class="centerText">$<%=flower.flowerAmount[i] * curPrice %> <% total+= flower.flowerAmount[i] * curPrice %></td>
+                    <td class="centerText">$<%= perStem %></td>   
+                    <td class="centerText">$<%= allStems %></td>
                 </tr>
            <% }) %>
 

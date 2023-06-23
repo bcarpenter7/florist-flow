@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const priceSchema = new Schema({
     plantName: String,
-    price: Number
+    price: Number,
+    bundle: Number
 })
 
 
