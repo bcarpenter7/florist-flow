@@ -80,7 +80,7 @@
 
    <div class="flex">
       <label>Greens #<%= y %> Name:</label>
-      <select name="green">
+      <select name="greenName">
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
@@ -108,7 +108,7 @@
 
       <div class="flex" id="y${y}">
       <label>Greens #${y} Name:</label>
-      <select name="green">
+      <select name="greenName">
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
@@ -133,18 +133,6 @@ const clickedRemoveGreen = function(e){
 }
 btnRemoveGreen.addEventListener('click', clickedRemoveGreen )
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
    
    <button type="submit" id="newBtn">Submit Order</button>
 </form>

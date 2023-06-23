@@ -7,13 +7,141 @@
    <label>New Date of Wedding:</label><input type="date" name="dateOfWedding" value="<%=flower.dateOfWedding %>">
 
 
-   <label>Flower #1 Name:</label><input type="text" name="flowerOneName" value="<%=flower.flowerName %>">
-   <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount" value="<%=flower.flowerAmount %>">
-   <label>Greenery #1 Name:</label><input type="text" name="greensOneName" value="<%=flower.greenName %>">
-   <label>Greenery #1 Amount:</label><input type="number" name="greensOneAmount" value="<%=flower.greenAmount %>">
+   <% let x = 1; %>
+
+   <% while(x < flower.flowerName.length + 1) {  %>
+      <div class="flex">
+         <label>Flower #<%= x %> Name:</label>
+         <select name="flowerName">
+              <option value="<%= flower.flowerName[x - 1] %>"><%= flower.flowerName[x - 1] %></option>
+              <option value="Rose">Rose</option>
+              <option value="Hydrangea">Hydrangea</option>
+              <option value="Mum">Mum</option>
+              <option value="Dahlia">Dahlia</option>
+         </select>
+         <label>Flower #<%= x %> Amount:</label><input type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>">
+         </div>
+<% x++ %>
+<% } %>
+
+<div id="btnDiv">
+   <button id="btnAddFlower" class="btnAdd">Add More</button>
+   <button id="btnRemoveFlower" class="btnRemove">Remove</button>
+</div>
 
 
-   <!-- <a href="/flowers/<%= flower.id %>">View Wedding</a> -->
+<script>
+   let btn = document.getElementById('btnAddFlower')
+   let x = 4;
+   const clicked = function(e){
+      // let val = document.getElementById('unique').value
+      e.preventDefault()
+      // y = val;
+      console.log(x)
+      x++
+      let html = `
+      <div class="flex" id="x${x}">
+         <label>Flower #${x} Name:</label>
+            <select name="flowerName">
+               <option value=""></option>
+               <option value="Rose">Rose</option>
+               <option value="Hydrangea">Hydrangea</option>
+               <option value="Mum">Mum</option>
+               <option value="Dahlia">Dahlia</option>
+            </select>
+         <label>Flower #${x} Amount:</label><input type="number" name="flowerAmount">
+      </div>
+   <% x++ %>
+`
+      btn.insertAdjacentHTML("beforebegin", html)
+   }
+
+
+   btn.addEventListener('click', clicked )
+   
+/// Remove Btn
+
+let btnRemove = document.getElementById('btnRemoveFlower')
+const clickedRemove = function(e){
+   e.preventDefault()
+   document.getElementById(`x${x}`).remove()
+   x--
+}
+btnRemove.addEventListener('click', clickedRemove )
+</script>
+
+
+<% let y = 1; %>
+
+<% while(y < 3) {  %>
+
+   <div class="flex">
+      <label>Greens #<%= y %> Name:</label>
+      <select name="greenName">
+         <option value="<%= flower.greenName[y - 1] %>"><%= flower.greenName[y - 1] %></option>
+           <option value="Ivy">Ivy</option>
+           <option value="Dusty Miller">Dusty Miller</option>   
+      </select>
+      <label>Greens #<%= y %> Amount:</label><input type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>">
+   </div>
+<% y++ %>
+<% } %>
+
+
+
+<div id="btnDiv">
+   <button id="btnAddGreen" class="btnAdd">Add More</button>
+   <button id="btnRemoveGreen" class="btnRemove">Remove</button>
+</div>
+
+
+<script>
+   let btnGreen = document.getElementById('btnAddGreen')
+   let y = 2;
+   const clickedGreen = function(e){
+      // let val = document.getElementById('unique').value
+      e.preventDefault()
+      // y = val;
+      console.log(y)
+      y++
+      let html = `
+
+      <div class="flex" id="y${y}">
+      <label>Greens #${y} Name:</label>
+      <select name="greenName">
+           <option value=""></option>
+           <option value="Ivy">Ivy</option>
+           <option value="Dusty Miller">Dusty Miller</option>   
+      </select>
+      <label>Greens #${y} Amount:</label><input type="number" name="greenAmount">
+      </div>
+
+      `
+      btnGreen.insertAdjacentHTML("beforebegin", html)
+   }
+
+
+   btnGreen.addEventListener('click', clickedGreen )
+   
+/// Remove Btn
+
+let btnRemoveGreen = document.getElementById('btnRemoveGreen')
+const clickedRemoveGreen = function(e){
+   e.preventDefault()
+   // called y# because the old buttons would remove each other with just a number//
+   document.getElementById(`y${y}`).remove()
+   y--
+}
+btnRemoveGreen.addEventListener('click', clickedRemoveGreen )
+</script>
+
+
+
+
+
+
+
+
    <button type="submit" id="newBtn">Save Changes</button>
 </form>
 
