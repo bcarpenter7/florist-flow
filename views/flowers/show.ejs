@@ -41,6 +41,7 @@
                 <% let bundle = price.find((e) => e.plantName === f).bundle %>
                 <% let perStem = curPrice / bundle %>
                 <% let allStems = flower.flowerAmount[i] * perStem %>
+                <% let bundlesNeeded = Math.ceil(flower.flowerAmount[i] / bundle) %>
                 <% total+= allStems %>
                 <tr>
                     <td><span class="showTitles">Flower #<%= i + 1 %></span></td>
@@ -48,6 +49,7 @@
                     <td class="centerText"><%=flower.flowerAmount[i] %></td>
                     <td class="centerText">$<%= perStem %></td>   
                     <td class="centerText">$<%= allStems %></td>
+                    <td class="centerText"><%= bundlesNeeded %> (<%= bundle %>)</td>
                 </tr>
            <% }) %>
 
