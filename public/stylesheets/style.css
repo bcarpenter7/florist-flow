@@ -15,9 +15,9 @@ body {
 
 .deleteBtn:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 1px black;
-  background-color: rgb(241, 46, 46);
+  background-color: rgb(203, 39, 39);
 }
+
 a {
   color: #00B7FF;
 }
@@ -57,6 +57,20 @@ nav > a:hover {
 
 /* flowers/Index.ejs */
 
+#viewWedding {
+  color: white;
+  padding: .7vmin;
+  border-radius: 300px;
+  text-decoration: none;
+  background-color: rgb(141, 196, 141);
+}
+
+#viewWedding:hover {
+  text-align: center;
+  justify-self: center;
+  background-color: rgb(118, 164, 118);
+}
+
 #indexHeader {
   text-align: center;
 }
@@ -65,8 +79,10 @@ span {
   color: black;
 }
 
+
 .indexAllLabel {
   color:rgb(141, 196, 141);
+  text-align: left;
 }
 
 #containerIndexAll {
@@ -75,6 +91,9 @@ span {
   padding: 1vmin 2vmin;
   border-radius: 5px;
   margin: 0 auto;
+  padding-bottom: 2vmin;
+  margin-bottom: 1vmin;
+  text-align: right;
 }
 
 #containerIndexAll:hover {

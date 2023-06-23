@@ -10,7 +10,7 @@
             <form action="/flowers/<%=f.id%>?_method=DELETE" method="POST">
                 <button class="deleteBtn" type="submit">X</button>
             </form>
-            <a href="/flowers/<%= f.id %>">View Wedding</a>
+            
             <a href="/flowers/<%= f.id %>/edit">Edit</a>
         </div>
 
@@ -24,8 +24,10 @@
             <span><%= f.greensOneName %></span>
             <span> (<%= f.greensOneAmount %>)</span>
         </h2>
+        <a id="viewWedding" href="/flowers/<%= f.id %>">View Wedding</a>
         
     </div>
+
 
 <% }) %> 
 
