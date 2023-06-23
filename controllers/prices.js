@@ -92,8 +92,7 @@ async function show(req, res){
         const priceFind = await Price.findById(req.params.id)
         const context ={
         price: priceFind,
-        title: priceFind.name,
-        price
+        title: priceFind.plantName,
     }
     res.render('prices/show', context)
 } catch(err){

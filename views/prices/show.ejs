@@ -1,3 +1,16 @@
 
 <%- include('../partials/header') %>
+
+
+<h2>View Order: <span><%= price.plantName %></span></h2>
+<div id="showDiv">
+    <label><span class="showTitles">Plant Name:</span> <%=price.plantName %></label>
+    <label><span class="showTitles">Price per bundle:</span> <%= price.price %></label>
+    <label><span class="showTitles">Bundle:</span> <%=price.bundle %></label>
+
+
+    <a href="/prices/<%= price.id %>/edit">Edit Price Details</a>
+</div>
+
+
 <%- include('../partials/footer') %>
