@@ -1,16 +1,32 @@
 <%- include('../partials/header') %>
-<h2>index page for all flowers</h2>
 
 
+<h2 id="indexHeader">All Orders:</h2>
 
 <% flowers.forEach(f => { %>
-    <h2><%= f.name %></h2>
-    <h2><%= f.amount %></h2>
-    <h2><%= f.zone %></h2>
-    <a href="/flowers/<%= f.id %>/edit">Edit</a>
-    <form action="/flowers/<%=f.id%>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
-    </form>
+    
+    <div id="containerIndexAll">
+        <div id="insideContainerIndex">
+            <form action="/flowers/<%=f.id%>?_method=DELETE" method="POST">
+                <button class="deleteBtn" type="submit">X</button>
+            </form>
+            <a href="/flowers/<%= f.id %>">View Wedding</a>
+            <a href="/flowers/<%= f.id %>/edit">Edit</a>
+        </div>
+
+        <h2 class="indexAllLabel">Client Name: <span><%= f.name %></span></h2>
+        <h2 class="indexAllLabel">Date of Wedding: <span><%= f.dateOfWedding %></span></h2>
+        <h2 class="indexAllLabel">Flower #1 Name: 
+            <span><%= f.flowerOneName %></span>
+            <span> (<%= f.flowerOneAmount %>)</span>
+        </h2>
+        <h2 class="indexAllLabel">Greenery #1 Name: 
+            <span><%= f.greensOneName %></span>
+            <span> (<%= f.greensOneAmount %>)</span>
+        </h2>
+        
+    </div>
+
 <% }) %> 
 
 

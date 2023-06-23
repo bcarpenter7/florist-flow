@@ -1,11 +1,15 @@
 <%- include('../partials/header') %>
 <h2>Edit page for flowers</h2>
 
-<form action="/flowers/<%= flower.id %>?_method=PUT"  method="POST">
-   <label>Name:</label><input name="name" value="<%= flower.name %>">
-   <label>Amount:</label><input name="amount" value="<%= flower.amount %>">
-   <label>Zone:</label><input name="zone" value="<%= flower.zone %>">
-   <button type="submit">Save Changes</button>
+<form id="newFlowerForm" action="/flowers/<%= flower.id %>?_method=PUT"  method="POST">
+   <label>Name of Client:</label><input type="text" name="name" value="<%= flower.name %>">
+   <label>Date of Wedding:</label><input type="date" name="dateOfWedding" value="<%=flower.dateOfWedding %>">
+   <label>Flower #1 Name:</label><input type="text" name="flowerOneName" value="<%=flower.flowerOneName %>">
+   <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount" value="<%=flower.flowerOneAmount %>">
+   <label>Greenery #1 Name:</label><input type="text" name="greensOneName" value="<%=flower.greensOneName %>">
+   <label>Greenery #1 Amount:</label><input type="number" name="greensOneAmount" value="<%=flower.greensOneAmount %>">
+   <!-- <a href="/flowers/<%= flower.id %>">View Wedding</a> -->
+   <button type="submit" id="newBtn">Save Changes</button>
 </form>
 
 <%- include('../partials/footer') %>

@@ -1,13 +1,113 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: white;
+  color: black;
 }
 
+.deleteBtn {
+  background-color: rgb(241, 46, 46);
+  border-radius: 5px;
+  border: none;
+  padding: .5vmin 1vmin;
+  color: white;
+  font-weight: bolder
+}
+
+.deleteBtn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px black;
+  background-color: rgb(241, 46, 46);
+}
 a {
   color: #00B7FF;
 }
 
 h2 {
-  color: white;
+  color: rgb(141, 196, 141);
+  text-align: center;
 }
+
+
+nav {
+  display: flex;
+  gap: 3vmin;
+}
+
+nav > a {
+  text-decoration: none;
+  color: gray;
+  font-size: 3vmin;
+}
+
+nav > a:hover {
+  cursor: pointer;
+}
+
+#newFlowerForm {
+  display: flex;
+  flex-direction: column;
+  width: 60vmin;
+  margin: 0 auto;
+}
+
+#newFlowerForm > label {
+  margin: 1vmin 0 0vmin 0;
+}
+
+
+/* flowers/Index.ejs */
+
+#indexHeader {
+  text-align: center;
+}
+
+span {
+  color: black;
+}
+
+.indexAllLabel {
+  color:rgb(141, 196, 141);
+}
+
+#containerIndexAll {
+  border: 1px solid gray;
+  width: 60vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+#containerIndexAll:hover {
+  background-color: rgb(250, 246, 246);
+}
+
+#insideContainerIndex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+
+/* flowers/Index.ejs */
+
+
+/* show */
+#showDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* show */
+
+
+/* new */
+#newBtn {
+  background-color: rgb(141, 196, 141);
+  color: white;
+  height: 4vmin;
+  border-radius: 3px;
+  margin-top: 1vmin;
+}
+/* new */

@@ -1,6 +1,11 @@
 <%- include('../partials/header') %>
-<h2>Show page for one flower</h2>
-<h2><%= flower.name %></h2>
-<h2><%= flower.zone %></h2>
-<h2><%= flower.amount %></h2>
+    <div id="showDiv">
+        <h2>Show page for one flower</h2>
+        <label>Date of Wedding:<%=flower.dateOfWedding %>"</label>
+        <label>Flower #1 Name:<%=flower.flowerOneName %>"</label>
+        <label>Flower #1 Amount:<%=flower.flowerOneAmount %>"</label>
+        <label>Greenery #1 Name:<%=flower.greensOneName %>"</label>
+        <label>Greenery #1 Amount:<%=flower.greensOneAmount %>"</label>
+        <a href="/flowers/<%= flower.id %>/edit">Edit Wedding Details</a>
+    </div>
 <%- include('../partials/footer') %>

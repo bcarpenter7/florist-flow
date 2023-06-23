@@ -1,11 +1,15 @@
 <%- include('../partials/header') %>
-<h2>New page for all flowers</h2>
 
-<form action="/flowers"  method="POST">
-   <label>Name:</label><input name="name">
-   <label>Amount:</label><input name="amount">
-   <label>Zone:</label><input name="zone">
-   <button type="submit">Submit Order</button>
+
+<form id="newFlowerForm" action="/flowers"  method="POST">
+   <h2>Create Your Bouquet</h2>
+   <label>Name of Client:</label><input type="text" name="name">
+   <label>Date of Wedding:</label><input type="date" name="dateOfWedding">
+   <label>Flower #1 Name:</label><input type="text" name="flowerOneName">
+   <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount">
+   <label>Greenery #1 Name:</label><input type="text" name="greensOneName">
+   <label>Greenery #1 Amount:</label><input type="number" name="greensOneAmount">
+   <button type="submit" id="newBtn">Submit Order</button>
 </form>
 
 <%- include('../partials/footer') %>
