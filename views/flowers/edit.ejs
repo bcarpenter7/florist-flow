@@ -3,7 +3,8 @@
 
 <form id="newFlowerForm" action="/flowers/<%= flower.id %>?_method=PUT"  method="POST">
    <label>Name of Client:</label><input type="text" name="name" value="<%= flower.name %>">
-   <label>Date of Wedding:</label><input type="date" name="dateOfWedding" value="<%=flower.dateOfWedding %>">
+   <label>Original Date of Wedding:</label><input value="<%=flower.dateOfWedding %>">
+   <label>New Date of Wedding:</label><input type="date" name="dateOfWedding" value="<%=flower.dateOfWedding %>">
    <label>Flower #1 Name:</label><input type="text" name="flowerOneName" value="<%=flower.flowerOneName %>">
    <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount" value="<%=flower.flowerOneAmount %>">
    <label>Greenery #1 Name:</label><input type="text" name="greensOneName" value="<%=flower.greensOneName %>">

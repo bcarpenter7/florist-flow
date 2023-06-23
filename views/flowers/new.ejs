@@ -5,10 +5,51 @@
    <h2>Create Your Bouquet</h2>
    <label>Name of Client:</label><input type="text" name="name">
    <label>Date of Wedding:</label><input type="date" name="dateOfWedding">
-   <label>Flower #1 Name:</label><input type="text" name="flowerOneName">
-   <label>Flower #1 Amount:</label><input type="number" name="flowerOneAmount">
-   <label>Greenery #1 Name:</label><input type="text" name="greensOneName">
-   <label>Greenery #1 Amount:</label><input type="number" name="greensOneAmount">
+
+   <div class="flex">
+   <label>Flower #1 Name:</label>
+   <select name="flowerName">
+        <option value="Rose">Rose</option>
+        <option value="Hydrangea">Hydrangea</option>
+        <option value="Mum">Mum</option>
+        <option value="Dahlia">Dahlia</option>
+   </select>
+   <label>Flower #1 Amount:</label><input type="number" name="flowerAmount">
+   </div>
+
+   <div class="flex">
+   <label>Flower #2 Name:</label>
+   <select name="flowerName">
+        <option value="Rose">Rose</option>
+        <option value="Hydrangea">Hydrangea</option>
+        <option value="Mum">Mum</option>
+        <option value="Dahlia">Dahlia</option>
+   </select>
+   <label>Flower #2 Amount:</label><input type="number" name="flowerAmount">
+   </div>
+
+   <div class="flex">
+   <label>Flower #3 Name:</label>
+   <select name="flowerName">
+        <option value="Rose">Rose</option>
+        <option value="Hydrangea">Hydrangea</option>
+        <option value="Mum">Mum</option>
+        <option value="Dahlia">Dahlia</option>
+   </select>
+   <label>Flower #3 Amount:</label><input type="number" name="flowerAmount">
+   </div>
+
+   <div class="flex">
+      <label>Greenery #1 Name:</label>
+      <select name="green">
+           <option value="Ivy">Ivy</option>
+           <option value="Dusty Miller">Dusty Miller</option>   
+      </select>
+      <label>Greenery #1 Amount:</label><input type="number" name="greenAmount">
+   </div>
+
+ 
+   
    <button type="submit" id="newBtn">Submit Order</button>
 </form>
 

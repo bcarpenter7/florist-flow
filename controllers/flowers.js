@@ -1,5 +1,6 @@
 
 const Flower = require('../models/flower')
+const Price = require('../models/price')
 
 module.exports = {
     index,
@@ -90,10 +91,14 @@ async function index(req, res){
 
 async function show(req, res){
     try {
+        //experiment
+        const price = await Price.find({})
+        //experiment
         const flowerFind = await Flower.findById(req.params.id)
         const context ={
         flower: flowerFind,
-        title: flowerFind.name
+        title: flowerFind.name,
+        price
     }
     res.render('flowers/show', context)
 } catch(err){

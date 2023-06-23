@@ -122,16 +122,53 @@ span {
 #showDiv {
   display: flex;
   flex-direction: column;
-  /* margin: 0 auto; */
   text-align: left;
-  /* align-items: center; */
-
+  width: 80vmin;
+  margin: 0 auto;
 }
+
+#showDiv > label {
+  font-weight: bold;
+  font-size: 1.8vmin;
+  margin-bottom: .5vmin;
+}
+
+.showTitles {
+  font-size: 2vmin;
+  font-weight: bold;
+  color: rgb(108, 155, 108);
+}
+
+#priceDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 80vmin;
+  margin: 0 auto;
+}
+
+#priceDiv > label {
+  font-weight: bold;
+  font-size: 1.8vmin;
+  margin-bottom: .5vmin;
+}
+
+
 
 /* show */
 
 
 /* new */
+.flex {
+  display: flex;
+  gap: 1vmin;
+  margin-top: 1vmin;
+}
+
+.flex > label {
+  margin-left: 4vmin;
+}
+
 #newBtn {
   background-color: rgb(121, 171, 121);
   color: white;

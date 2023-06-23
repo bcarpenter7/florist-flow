@@ -1,21 +1,54 @@
+
+
+
 <%- include('../partials/header') %>
+    <h2>View Order: <span><%= flower.name %></span></h2>
     <div id="showDiv">
-        <h2>View Order: <span><%= flower.name %></span></h2>
-        <label>Name: <%=flower.name %></label>
-        <label>Date of Wedding: <%=flower.dateOfWedding %></label>
-        <label>Flower #1: <%=flower.flowerOneName %></label>
-        <label>Flower #1 Amount: <%=flower.flowerOneAmount %></label>
-        <label>Greenery #1 Name: <%=flower.greensOneName %></label>
-        <label>Greenery #1 Amount: <%=flower.greensOneAmount %></label>
+        <label><span class="showTitles">Name:</span> <%=flower.name %></label>
+        <label><span class="showTitles">Date of Wedding:</span> <%=flower.dateOfWedding %></label>
+
+        <% flower.flowerName.forEach((f, i) => {  %>
+        <label><span class="showTitles">Flower #<%= i + 1%>:</span> <%=f %></label>
+        <label><span class="showTitles">Flower #<%= i + 1%> Amount:</span> <%=flower.flowerAmount[i]  %></label>
+        <% }) %>
+     
+
+        <label><span class="showTitles">Greenery #1 Name:</span> <%=flower.greenName %></label>
+        <label><span class="showTitles">Greenery #1 Amount:</span> <%=flower.greenAmount %></label>
         <a href="/flowers/<%= flower.id %>/edit">Edit Wedding Details</a>
     </div>
+
     <div id="priceDiv">
+
         <h2>Price Breakdown</h2>
-        <label>Date of Wedding:<%=flower.dateOfWedding %>"</label>
-        <label>Flower #1 Name:<%=flower.flowerOneName %>"</label>
-        <label>Flower #1 Amount:<%=flower.flowerOneAmount %>"</label>
-        <label>Greenery #1 Name:<%=flower.greensOneName %>"</label>
-        <label>Greenery #1 Amount:<%=flower.greensOneAmount %>"</label>
-       
+        <!-- <label><span class="showTitles">Flower #1:</span> <%=flower.flowerOneName %></label>
+        <label><span class="showTitles">Flower #1 Amount:</span> <%=flower.flowerOneAmount %></label>
+        <label><span class="showTitles">Greenery #1 Name:</span> <%=flower.greensOneName %></label>
+        <label><span class="showTitles">Greenery #1 Amount:</span> <%=flower.greensOneAmount %></label> -->
+            <% let total = 0; %>
+        <table>
+            <tr>
+              <th>Selection</th>
+              <th>Plant Name</th>
+              <th>Amount</th>
+              <th>Price Per Stem</th>
+              <th>Total</th>
+            </tr>
+
+            <% flower.flowerName.forEach((f, i) => {  %>
+                <% let curPrice = price.find((e) => e.flowerName === f).price %>
+                <tr>
+                    <td><span class="showTitles">Flower #<%= i + 1 %></span></td>
+                    <td><%=f %></td>
+                    <td><%=flower.flowerAmount[i] %></td>
+                    <td><%= curPrice %></td>   
+                    <td><%=flower.flowerAmount[i] * curPrice %> <% total+= flower.flowerAmount[i] * curPrice %></td>
+                </tr>
+
+           <% }) %>
+        </table>
+        <h2>Total Price of Flowers: $<%= total %></h2>
     </div>
+
+
 <%- include('../partials/footer') %>

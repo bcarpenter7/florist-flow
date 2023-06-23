@@ -5,13 +5,20 @@ const Schema = mongoose.Schema;
 const flowerSchema = new Schema({
     name: String,
     dateOfWedding: Date,
-    flowerOneName: String,
-    flowerOneAmount: Number,
-    greensOneName: String,
-    greensOneAmount: Number,
+    flowerName: [{type: String, enum: ["Rose", "Hydrangea", "Dahlia", "Mum"]}],
+    flowerAmount: [{type: Number, min: 1, max: 99}],
+    green: {type: String, enum: ["Ivy", "Dusty Miller"]},
+    greenAmount: [{type: Number, min: 1, max: 99}],
+
 }, {timestamps: true});
 
+
 module.exports = mongoose.model('Flower', flowerSchema)
+
+
+
+
+
 
 // orderDate: Date
 //flowerTwoName: String,
