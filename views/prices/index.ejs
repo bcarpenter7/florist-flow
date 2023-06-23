@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+
+<h2 id="indexHeader">Prices</h2>
+
+
+<% prices.forEach(p => { %>
+    
+    <div id="containerIndexAll">
+        <div id="insideContainerIndex">
+            <form action="/prices/<%=p.id%>?_method=DELETE" method="POST">
+                <button class="deleteBtn" type="submit">X</button>
+            </form>
+            
+            <a href="/prices/<%= p.id %>/edit">Edit</a>
+        </div>
+        
+        <h2 class="indexAllLabel">Name: <span><%= p.plantName %></span></h2>
+        <h2 class="indexAllLabel">Price: <span><%= p.price %></span></h2>
+        <h2 class="indexAllLabel">Bundle: <span><%= p.bundle %></span></h2>
+       
+        
+        <a id="viewWedding" href="/prices/<%= p.id %>">View Wedding</a>
+        
+    </div>
+    <% }) %>
+<%- include('../partials/footer') %>

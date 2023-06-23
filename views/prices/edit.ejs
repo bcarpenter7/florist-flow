@@ -1,0 +1,10 @@
+<%- include('../partials/header') %>
+<h2>Edit Wedding Details</h2>
+
+<form id="newFlowerForm" action="/prices/<%= price.id %>?_method=PUT"  method="POST">
+   <label>Plant Name:</label><input type="text" name="name" value="<%= price.plantName %>">
+   <label>Price Per Bundle:</label><input value="<%=price.price %>">
+   <label>Plants Per bundle:</label><input type="text" name="location" value="<%=price.bundle %>">
+   <button type="submit" id="newBtn">Save Changes</button>
+</form>
+<%- include('../partials/footer') %>
