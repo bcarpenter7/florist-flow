@@ -6,17 +6,7 @@
    <h2>Create Your Bouquet</h2>
    <label>Name of Client:</label><input type="text" name="name">
    <label>Date of Wedding:</label><input type="date" name="dateOfWedding">
-   <!-- <label>Number of Unique Flowers:</label><input type="number" name="unique" id="unique"> -->
-
-
-   
    <% let x = 1; %>
-   <% let y = 2 %>
-   <script>
-   if(!y) {
-      y = 2; 
-   } 
-   </script>
 
    <% while(x < 5) {  %>
       <div class="flex">
@@ -32,13 +22,14 @@
          </div>
 <% x++ %>
 <% } %>
+
    <div id="btnDiv">
-   <button id="btnAdd">Add More</button>
-   <button id="btnRemove">Remove</button>
+   <button id="btnAddFlower" class="btnAdd">Add More</button>
+   <button id="btnRemoveFlower" class="btnRemove">Remove</button>
    </div>
 
    <script>
-      let btn = document.getElementById('btnAdd')
+      let btn = document.getElementById('btnAddFlower')
       let x = 4;
       const clicked = function(e){
          // let val = document.getElementById('unique').value
@@ -47,7 +38,7 @@
          console.log(x)
          x++
          let html = `
-         <div class="flex" id="${x}">
+         <div class="flex" id="x${x}">
             <label>Flower #${x} Name:</label>
                <select name="flowerName">
                   <option value=""></option>
@@ -68,28 +59,92 @@
       
    /// Remove Btn
 
-   let btnRemove = document.getElementById('btnRemove')
+   let btnRemove = document.getElementById('btnRemoveFlower')
    const clickedRemove = function(e){
       e.preventDefault()
-      document.getElementById(`${x}`).remove()
+      document.getElementById(`x${x}`).remove()
       x--
    }
    btnRemove.addEventListener('click', clickedRemove )
    </script>
 
 
- 
+
+
+<!-- Below here is for Greenery -->
+
+
+<% let y = 1; %>
+
+<% while(y < 3) {  %>
 
    <div class="flex">
-      <label>Greenery #1 Name:</label>
+      <label>Greens #<%= y %> Name:</label>
       <select name="green">
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Greenery #1 Amount:</label><input type="number" name="greenAmount">
+      <label>Greens #<%= y %> Amount:</label><input type="number" name="greenAmount">
    </div>
+<% y++ %>
+<% } %>
 
- 
+
+<div id="btnDiv">
+   <button id="btnAddGreen" class="btnAdd">Add More</button>
+   <button id="btnRemoveGreen" class="btnRemove">Remove</button>
+</div>
+
+<script>
+   let btnGreen = document.getElementById('btnAddGreen')
+   let y = 2;
+   const clickedGreen = function(e){
+      // let val = document.getElementById('unique').value
+      e.preventDefault()
+      // y = val;
+      console.log(y)
+      y++
+      let html = `
+
+      <div class="flex" id="y${y}">
+      <label>Greens #${y} Name:</label>
+      <select name="green">
+           <option value="Ivy">Ivy</option>
+           <option value="Dusty Miller">Dusty Miller</option>   
+      </select>
+      <label>Greens #${y} Amount:</label><input type="number" name="greenAmount">
+      </div>
+
+      `
+      btnGreen.insertAdjacentHTML("beforebegin", html)
+   }
+
+
+   btnGreen.addEventListener('click', clickedGreen )
+   
+/// Remove Btn
+
+let btnRemoveGreen = document.getElementById('btnRemoveGreen')
+const clickedRemoveGreen = function(e){
+   e.preventDefault()
+   // called y# because the old buttons would remove each other with just a number//
+   document.getElementById(`y${y}`).remove()
+   y--
+}
+btnRemoveGreen.addEventListener('click', clickedRemoveGreen )
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
    
    <button type="submit" id="newBtn">Submit Order</button>
 </form>
