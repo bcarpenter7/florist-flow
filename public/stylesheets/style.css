@@ -1,3 +1,7 @@
+
+
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -24,6 +28,10 @@ a {
 
 h2 {
   color: rgb(141, 196, 141);
+  text-align: center;
+}
+
+h4 {
   text-align: center;
 }
 
@@ -97,7 +105,7 @@ span {
 }
 
 #containerIndexAll:hover {
-  background-color: rgb(250, 246, 246);
+  background-color: rgb(245, 244, 244);
 }
 
 #insideContainerIndex {
@@ -123,10 +131,28 @@ span {
 
 /* new */
 #newBtn {
-  background-color: rgb(141, 196, 141);
+  background-color: rgb(121, 171, 121);
   color: white;
   height: 4vmin;
   border-radius: 3px;
   margin-top: 1vmin;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2vmin;
+  border: none;
+}
+
+#newBtn:hover {
+  background-color: rgb(108, 155, 108);
+  color: white;
+  height: 4vmin;
+  border-radius: 3px;
+  margin-top: 1vmin;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2vmin;
+  border: none;
 }
 /* new */
