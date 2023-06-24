@@ -2,13 +2,13 @@
 
 
 <%- include('../partials/header') %>
-<script>let fl = flower.dateOfWedding.slice(0, 10)</script>
+<script>let fl = flower.dateOfEvent.slice(0, 10)</script>
 
 
     <h2>View Order: <span><%= flower.name %></span></h2>
     <div id="showDiv">
         <label><span class="showTitles">Name:</span> <%=flower.name %></label>
-        <label><span class="showTitles">Date of Wedding:</span> <%= flower.dateOfWedding %></label>
+        <label><span class="showTitles">Date of Event:</span> <%= flower.dateOfEvent %></label>
         <label><span class="showTitles">Location:</span> <%=flower.location %></label>
 
         <% flower.flowerName.forEach((f, i) => {  %>
@@ -19,7 +19,7 @@
         <label><span class="showTitles">Greenery #<%= i + 1%>:</span> <%=g %> (<%=flower.greenAmount[i] %>)</label>
         <% }) %>
 
-        <a href="/flowers/<%= flower.id %>/edit">Edit Wedding Details</a>
+        <a href="/flowers/<%= flower.id %>/edit">Edit Event Details</a>
     </div>
 
     <div id="priceDiv">
