@@ -27,6 +27,9 @@ body {
   /* background-color: white; */
 }
 
+label {
+  font-size: 2vmin;
+}
 .centerText {
   text-align: center;
 }
@@ -200,11 +203,18 @@ span {
 
 
 /* new */
-
 #btnDiv {
-  text-align: center;
   width: 100%;
-  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#btnDiv > label {
+  text-align: none;
+}
+
+#btnDiv > button {
+  text-align: center;
+  margin-left: 10vmin;
 }
 
 .btnAdd {
@@ -240,11 +250,16 @@ text-transform: capitalize;
 
 .flex {
   display: flex;
-  gap: 1vmin;
+  width: 100%;
+  gap: 4vmin;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
+  justify-content: center;
 }
 
+#numberInput {
+  width: 9vmin;
+}
 
 #newBtn {
   background-color: var(--mediumGreen);

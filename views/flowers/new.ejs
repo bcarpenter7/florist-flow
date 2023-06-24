@@ -11,7 +11,7 @@
 
    <% while(x < 4) {  %>
       <div class="flex">
-         <label>Flower #<%= x %> Name:</label>
+         <label>Flower #<%= x %>: </label>
          <select name="flowerName">
               <option value=""></option>
               <option value="Rose">Rose</option>
@@ -20,7 +20,7 @@
               <option value="Dahlia">Dahlia</option>
               <option value="Ranunculus (White)"></option>
          </select>
-         <label>Flower #<%= x %> Amount:</label><input type="number" name="flowerAmount">
+         <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount">
          </div>
 <% x++ %>
 <% } %>
@@ -41,7 +41,7 @@
          x++
          let html = `
          <div class="flex" id="x${x}">
-            <label>Flower #${x} Name:</label>
+            <label>Flower #${x}:</label>
                <select name="flowerName">
                   <option value=""></option>
                   <option value="Rose">Rose</option>
@@ -49,7 +49,7 @@
                   <option value="Mum">Mum</option>
                   <option value="Dahlia">Dahlia</option>
                </select>
-            <label>Flower #${x} Amount:</label><input type="number" name="flowerAmount">
+            <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount">
          </div>
       <% x++ %>
    `
@@ -81,12 +81,12 @@
 <% while(y < 3) {  %>
 
    <div class="flex">
-      <label>Greens #<%= y %> Name:</label>
+      <label>Greens #<%= y %>:</label>
       <select name="greenName">
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Greens #<%= y %> Amount:</label><input type="number" name="greenAmount">
+      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount">
    </div>
 <% y++ %>
 <% } %>
@@ -109,12 +109,12 @@
       let html = `
 
       <div class="flex" id="y${y}">
-      <label>Greens #${y} Name:</label>
+      <label>Greens #${y}:</label>
       <select name="greenName">
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Greens #${y} Amount:</label><input type="number" name="greenAmount">
+      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount">
       </div>
 
       `
