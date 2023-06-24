@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<h2>Edit Event Details</h2>
+<h1>Edit Event Details</h1>
 
 <form id="newFlowerForm" action="/flowers/<%= flower.id %>?_method=PUT"  method="POST">
    <label>Name of Client:</label><input type="text" name="name" value="<%= flower.name %>">

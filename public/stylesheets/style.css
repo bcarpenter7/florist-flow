@@ -1,11 +1,30 @@
-
+:root {
+  /* --lightGreen: rgb(141, 196, 141);
+  --mediumGreen: rgb(118, 164, 118);
+  --darkGreen: rgb(84, 117, 84); */
+  --blue: #6C8EAD;
+  --darkBlue: #114B5F;
+  --red: #BB4430;
+  --darkRed: #a73d2b;
+  --olive: #83781B;
+  --darkOlive: #6b6315;
+  --lightGreen: #95B46A;
+  --mediumGreen: #709255;
+  --darkGreen: #3E5622;
+  --darkestGreen: #172815;
+  --black: #3d4448;
+  --white: #f6f2f2;
+  --darkWhite: #eeecec;
+}
 
 
 
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: black;
+  color: var(--black);
+  background-color: var(--white);
+  /* background-color: white; */
 }
 
 .centerText {
@@ -13,7 +32,7 @@ body {
 }
 
 .deleteBtn {
-  background-color: rgb(241, 46, 46);
+  background-color: var(--red);
   border-radius: 5px;
   border: none;
   padding: .5vmin 1vmin;
@@ -23,16 +42,17 @@ body {
 
 .deleteBtn:hover {
   cursor: pointer;
-  background-color: rgb(203, 39, 39);
+  background-color: var(--darkRed);
 }
 
 a {
   color: #00B7FF;
 }
 
-h2 {
-  color: rgb(141, 196, 141);
+h1 {
+  color: var(--mediumGreen);
   text-align: center;
+  font-size: 3.5vmin;
 }
 
 h4 {
@@ -84,13 +104,13 @@ nav > a:hover {
   padding: .7vmin;
   border-radius: 300px;
   text-decoration: none;
-  background-color: rgb(141, 196, 141);
+  background-color: var(--blue);
 }
 
 #viewEvent:hover {
   text-align: center;
   justify-self: center;
-  background-color: rgb(118, 164, 118);
+  background-color: var(--darkBlue);
 }
 
 #indexHeader {
@@ -98,12 +118,12 @@ nav > a:hover {
 }
 
 span {
-  color: black;
+  color: var(--black);
 }
 
 
 .indexAllLabel {
-  color:rgb(141, 196, 141);
+  color:var(--mediumGreen);
   text-align: left;
 }
 
@@ -119,7 +139,7 @@ span {
 }
 
 #containerIndexAll:hover {
-  background-color: rgb(245, 244, 244);
+  background-color: var(--darkWhite)
 }
 
 #insideContainerIndex {
@@ -150,7 +170,7 @@ span {
 .showTitles {
   font-size: 2vmin;
   font-weight: bold;
-  color: rgb(108, 155, 108);
+  color: var(--mediumGreen);
 }
 
 #priceDiv {
@@ -168,7 +188,7 @@ span {
 }
 
 #priceBreakdownTable {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   padding: 1vmin;
 }
 
@@ -188,7 +208,7 @@ span {
 }
 
 .btnAdd {
-background-color: rgb(50, 50, 237);
+background-color: var(--blue);
 border-radius: 5px;
 border: none;
 padding: .5vmin 1vmin;
@@ -199,11 +219,11 @@ text-transform: capitalize;
 
 .btnAdd:hover {
   cursor: pointer;
-  background-color: rgb(35, 35, 160);
+  background-color: var(--darkBlue);
 }
 
 .btnRemove {
-  background-color: rgb(241, 46, 46);
+  background-color: var(--red);
   border-radius: 5px;
   border: none;
   padding: .5vmin 1vmin;
@@ -214,7 +234,7 @@ text-transform: capitalize;
 
 .btnRemove:hover {
   cursor: pointer;
-  background-color: rgb(203, 39, 39);
+  background-color: var(--darkRed);
 }
 
 
@@ -227,7 +247,7 @@ text-transform: capitalize;
 
 
 #newBtn {
-  background-color: rgb(121, 171, 121);
+  background-color: var(--mediumGreen);
   color: white;
   height: 4vmin;
   border-radius: 3px;
@@ -240,7 +260,7 @@ text-transform: capitalize;
 }
 
 #newBtn:hover {
-  background-color: rgb(108, 155, 108);
+  background-color: var(--darkGreen);
   color: white;
   height: 4vmin;
   border-radius: 3px;
@@ -256,6 +276,10 @@ text-transform: capitalize;
 
 
 /* Prices */
+
+#addPlant {
+  margin-left: -2vmin;
+}
 #plantDiv {
   margin-left: 52vmin;
   margin-bottom: 2vmin;
@@ -267,6 +291,36 @@ text-transform: capitalize;
   color: white;
   padding: 1vmin;
   border-radius: 200px;
-  background-color: green;
+  background-color: var(--blue)
+}
+
+#plantDiv > a:hover {
+  text-decoration: none;
+  color: white;
+  padding: 1vmin;
+  border-radius: 200px;
+  background-color: var(--darkBlue)
+}
+
+#containerDatabase {
+  border: 1px solid gray;
+  width: 90vmin;
+  padding: 1vmin 2vmin;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding-bottom: 2vmin;
+  margin-bottom: 1vmin;
+  text-align: right;
+}
+
+#itemsDatabase {
+  display: flex;
+  gap: 2.5vmin;
+  align-items: center;
+}
+
+#special {
+  font-size: 3.5vmin;
+  text-decoration: underline;
 }
 /* Prices */

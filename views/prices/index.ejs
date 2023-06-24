@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 
 
-<h2 id="indexHeader">Prices</h2>
+<h1 id="indexHeader">Plant Database</h1>
 <div id="plantDiv">
-<a id="addPlant" href="/prices/new">Add Plant</a>
+<a id="addPlant" href="/prices/new">Add New Plant</a>
 </div>
 <% prices.forEach(p => { %>
     
-    <div id="containerIndexAll">
+    <div id="containerDatabase">
         <div id="insideContainerIndex">
             <form action="/prices/<%=p.id%>?_method=DELETE" method="POST">
                 <button class="deleteBtn" type="submit">X</button>
@@ -15,13 +15,14 @@
             
             <a href="/prices/<%= p.id %>/edit">Edit</a>
         </div>
+        <div id="itemsDatabase">
+        <h2 class="indexAllLabel"><span id="special"><%= p.plantName %></span></h2>
+        <br>
+        <h2 class="indexAllLabel">Bundle Price: <span>$<%= p.price %></span></h2>
+        <h2 class="indexAllLabel">Bundle: <span><%= p.bundle %> plants</span></h2>
+        </div>
         
-        <h2 class="indexAllLabel">Name: <span><%= p.plantName %></span></h2>
-        <h2 class="indexAllLabel">Price: <span><%= p.price %></span></h2>
-        <h2 class="indexAllLabel">Bundle: <span><%= p.bundle %></span></h2>
-       
-        
-        <a id="viewWedding" href="/prices/<%= p.id %>">View Wedding</a>
+        <a id="viewEvent" href="/prices/<%= p.id %>">View Plant</a>
         
     </div>
     <% }) %>
