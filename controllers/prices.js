@@ -57,7 +57,7 @@ async function deletePrice(req, res){
 
 async function create(req, res){
     try {
-        await Flower.create(req.body)
+        await Price.create(req.body)
         res.redirect('/prices')
     } catch(err) {
         res.render('prices/new', {
