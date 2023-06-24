@@ -39,10 +39,20 @@ h4 {
   text-align: center;
 }
 
-
-nav {
+#navDiv {
   display: flex;
-  gap: 3vmin;
+  justify-content: space-between;
+}
+
+#navOne {
+  display: flex;
+  gap: 7vmin;
+}
+
+#navTwo {
+  display: flex;
+  gap: 7vmin;
+  justify-self: end;
 }
 
 nav > a {
@@ -243,3 +253,20 @@ text-transform: capitalize;
   cursor: pointer;
 }
 /* new */
+
+
+/* Prices */
+#plantDiv {
+  margin-left: 52vmin;
+  margin-bottom: 2vmin;
+  text-align: center;
+}
+
+#plantDiv > a {
+  text-decoration: none;
+  color: white;
+  padding: 1vmin;
+  border-radius: 200px;
+  background-color: green;
+}
+/* Prices */
