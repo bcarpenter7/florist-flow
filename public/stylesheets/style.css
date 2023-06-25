@@ -30,6 +30,12 @@ body {
 label {
   font-size: 2vmin;
 }
+
+#errorMsg {
+  color: red;
+
+}
+
 .centerText {
   text-align: center;
 }

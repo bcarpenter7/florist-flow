@@ -7,7 +7,7 @@ const flowerSchema = new Schema({
     dateOfEvent: String,
     location: String,
     flowerName: [{type: String, enum: ["Rose", "Hydrangea", "Dahlia", "Mum", "Ranunculus (White)"]}],
-    flowerAmount: [{type: Number, min: 1, max: 99}],
+    flowerAmount: [{type: Number, min: 1, max: 99, required: true}],
     greenName: [{type: String, enum: ["Ivy", "Dusty Miller"]}],
     greenAmount: [{type: Number, min: 1, max: 99}],
 }, {timestamps: true});

@@ -4,15 +4,15 @@
 
 <form id="newFlowerForm" action="/flowers"  method="POST">
    <h1>Create Your Bouquet</h1>
-   <label>Name of Client:</label><input type="text" name="name">
-   <label>Date of Event:</label><input type="date" name="dateOfEvent">
-   <label>Location:</label><input type="text" name="location">
+   <label>Name of Client:</label><input type="text" name="name" required>
+   <label>Date of Event:</label><input type="date" name="dateOfEvent" required>
+   <label>Location:</label><input type="text" name="location" required>
    <% let x = 1; %>
 
    <% while(x < 4) {  %>
       <div class="flex">
          <label>Flower #<%= x %>: </label>
-         <select name="flowerName">
+         <select name="flowerName" required>
               <option value=""></option>
               <option value="Rose">Rose</option>
               <option value="Hydrangea">Hydrangea</option>
@@ -20,7 +20,7 @@
               <option value="Dahlia">Dahlia</option>
               <option value="Ranunculus (White)"></option>
          </select>
-         <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount">
+         <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
          </div>
 <% x++ %>
 <% } %>
@@ -42,14 +42,14 @@
          let html = `
          <div class="flex" id="x${x}">
             <label>Flower #${x}:</label>
-               <select name="flowerName">
+               <select name="flowerName" required>
                   <option value=""></option>
                   <option value="Rose">Rose</option>
                   <option value="Hydrangea">Hydrangea</option>
                   <option value="Mum">Mum</option>
                   <option value="Dahlia">Dahlia</option>
                </select>
-            <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount">
+            <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
          </div>
       <% x++ %>
    `
@@ -82,11 +82,11 @@
 
    <div class="flex">
       <label>Greens #<%= y %>:</label>
-      <select name="greenName">
+      <select name="greenName" required>
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount">
+      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount" required>
    </div>
 <% y++ %>
 <% } %>
@@ -110,11 +110,11 @@
 
       <div class="flex" id="y${y}">
       <label>Greens #${y}:</label>
-      <select name="greenName">
+      <select name="greenName" required>
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount">
+      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount" required>
       </div>
 
       `
@@ -137,6 +137,8 @@ btnRemoveGreen.addEventListener('click', clickedRemoveGreen )
 </script>
    
    <button type="submit" id="newBtn">Submit Order</button>
+   <% if(errorMsg){ errorMsg = "Missing required fields"} %>
+   <p id="errorMsg"><%= errorMsg %></p>
 </form>
 
 <%- include('../partials/footer') %>
