@@ -5,15 +5,16 @@
 <div id="plantDiv">
 <a id="addPlant" href="/prices/new">Add New Plant</a>
 </div>
+
 <% prices.forEach(p => { %>
     
     <div id="containerDatabase">
         <div id="insideContainerIndex">
             <form action="/prices/<%=p.id%>?_method=DELETE" method="POST">
-                <button class="deleteBtn" type="submit">X</button>
+                <button class="deleteBtn" type="submit" >X</button>
             </form>
             
-            <a href="/prices/<%= p.id %>/edit">Edit</a>
+            <a href="/prices/<%= p.id %>/edit" id="editBtn">Edit</a>
         </div>
         <div id="itemsDatabase">
         <h2 class="indexAllLabel"><span id="special"><%= p.plantName %></span></h2>

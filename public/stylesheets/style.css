@@ -17,7 +17,9 @@
   --darkWhite: #eeecec;
 }
 
-
+#editBtn {
+  color: var(--blue)
+}
 
 body {
   padding: 50px;
@@ -111,6 +113,7 @@ nav > a:hover {
 #viewEvent {
   color: white;
   padding: .7vmin;
+  padding: .7vmin 1.3vmin;
   border-radius: 300px;
   text-decoration: none;
   background-color: var(--blue);
