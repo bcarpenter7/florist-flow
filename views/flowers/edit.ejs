@@ -2,24 +2,24 @@
 <h1>Edit Event Details</h1>
 
 <form id="newFlowerForm" action="/flowers/<%= flower.id %>?_method=PUT"  method="POST">
-   <label>Name of Client:</label><input type="text" name="name" value="<%= flower.name %>">
+   <label>Name of Client:</label><input type="text" name="name" value="<%= flower.name %>" required>
    <label>Original Date of Event:</label><input value="<%=flower.dateOfEvent %>">
-   <label>New Date of Event:</label><input type="date" name="dateOfEvent" value="<%=flower.dateOfWedding %>">
-   <label>Location:</label><input type="text" name="location" value="<%=flower.location %>">
+   <label>New Date of Event:</label><input type="date" name="dateOfEvent" value="<%=flower.dateOfWedding %>" required>
+   <label>Location:</label><input type="text" name="location" value="<%=flower.location %>" required>
 
    <% let x = 1; %>
 
    <% while(x < flower.flowerName.length + 1) {  %>
       <div class="flex">
          <label>Flower #<%= x %> Name:</label>
-         <select name="flowerName">
+         <select name="flowerName" required>
               <option value="<%= flower.flowerName[x - 1] %>"><%= flower.flowerName[x - 1] %></option>
               <option value="Rose">Rose</option>
               <option value="Hydrangea">Hydrangea</option>
               <option value="Mum">Mum</option>
               <option value="Dahlia">Dahlia</option>
          </select>
-         <label>Flower #<%= x %> Amount:</label><input type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>">
+         <label>Flower #<%= x %> Amount:</label><input type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>" min="0" max="400" required>
          </div>
 <% x++ %>
 <% } %>
@@ -42,14 +42,14 @@
       let html = `
       <div class="flex" id="x${x}">
          <label>Flower #${x} Name:</label>
-            <select name="flowerName">
+            <select name="flowerName" required>
                <option value=""></option>
                <option value="Rose">Rose</option>
                <option value="Hydrangea">Hydrangea</option>
                <option value="Mum">Mum</option>
                <option value="Dahlia">Dahlia</option>
             </select>
-         <label>Flower #${x} Amount:</label><input type="number" name="flowerAmount">
+         <label>Flower #${x} Amount:</label><input type="number" name="flowerAmount" min="0" max="400" required>
       </div>
    <% x++ %>
 `
@@ -77,12 +77,12 @@ btnRemove.addEventListener('click', clickedRemove )
 
    <div class="flex">
       <label>Greens #<%= y %> Name:</label>
-      <select name="greenName">
+      <select name="greenName" required>
          <option value="<%= flower.greenName[y - 1] %>"><%= flower.greenName[y - 1] %></option>
-           <option value="Ivy">Ivy</option>
-           <option value="Dusty Miller">Dusty Miller</option>   
+         <option value="Ivy">Ivy</option>
+         <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Greens #<%= y %> Amount:</label><input type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>">
+      <label>Greens #<%= y %> Amount:</label><input type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>" min="0" max="400" required>
    </div>
 <% y++ %>
 <% } %>
@@ -108,12 +108,12 @@ btnRemove.addEventListener('click', clickedRemove )
 
       <div class="flex" id="y${y}">
       <label>Greens #${y} Name:</label>
-      <select name="greenName">
+      <select name="greenName" required>
            <option value=""></option>
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
       </select>
-      <label>Greens #${y} Amount:</label><input type="number" name="greenAmount">
+      <label>Greens #${y} Amount:</label><input type="number" name="greenAmount" min="0" max="400"required>
       </div>
 
       `
