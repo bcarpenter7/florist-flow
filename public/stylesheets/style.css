@@ -389,19 +389,38 @@ text-transform: capitalize;
 
 /* Index Homepage */
 #homePageDiv {
-  width: 50vmin;
-  margin-left: 40%;
-  margin-top: 10%;
+  width: 100vmin;
+  margin-left: 5%;
+  margin-top: 7%;
+  display: flex;
+  gap: 15vmin;
+}
 
+.homepageImg {
+  width: 40vmin;
+  transform: rotate(35deg);
+}
+
+.homepageImgOne {
+  width: 40vmin;
+  transform: scaleX(-1) rotate(35deg);
+}
+
+#middle {
+  width: 50vmin;
+  text-align: center;
 }
 
 #homePageGrab {
   font-size: 5vmin;
   color: var(--darkBlue);
   margin-bottom: 0;
+  width: 50vmin;
 }
 
 #homePageMessage {
-  font-size: 3vmin;
+  font-size: 3.5vmin;
   color: var(--blue);
 }
+
+
