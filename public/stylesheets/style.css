@@ -13,9 +13,12 @@
   --darkGreen: #3E5622;
   --darkestGreen: #172815;
   --black: #3d4448;
-  --white: #f6f2f2;
+  --white: #f2f2f2;
+  /* --white: white; */
   --darkWhite: #eeecec;
 }
+
+
 
 #editBtn {
   color: var(--blue)
@@ -71,6 +74,13 @@ h4 {
 }
 
 /* NAV */
+
+.anchors {
+  display: flex;
+  align-items: center;
+  gap: .5vmin;
+}
+
 #homePageTitle {
   font-size: 4vmin;
 }
