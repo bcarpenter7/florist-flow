@@ -70,6 +70,11 @@ h4 {
   text-align: center;
 }
 
+/* NAV */
+#homePageTitle {
+  font-size: 4vmin;
+}
+
 #navDiv {
   display: flex;
   justify-content: space-between;
@@ -77,12 +82,16 @@ h4 {
 
 #navOne {
   display: flex;
+  align-items: center;
+  margin-top: -4vmin;
   gap: 7vmin;
 }
 
 #navTwo {
   display: flex;
-  gap: 7vmin;
+  gap: 6vmin;
+  margin-top: -4vmin;
+  align-items: center;
   justify-self: end;
 }
 
@@ -95,6 +104,8 @@ nav > a {
 nav > a:hover {
   cursor: pointer;
 }
+
+/* NAV */
 
 #newFlowerForm {
   display: flex;
@@ -352,3 +363,22 @@ text-transform: capitalize;
   text-decoration: underline;
 }
 /* Prices */
+
+/* Index Homepage */
+#homePageDiv {
+  width: 50vmin;
+  margin-left: 40%;
+  margin-top: 10%;
+
+}
+
+#homePageGrab {
+  font-size: 5vmin;
+  color: var(--darkBlue);
+  margin-bottom: 0;
+}
+
+#homePageMessage {
+  font-size: 3vmin;
+  color: var(--blue);
+}
