@@ -21,7 +21,16 @@
 
 
 #editBtn {
-  color: var(--blue)
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 1vmin;
+  text-decoration: none;
+}
+
+#editBtn:hover {
+  color: var(--darkBlue);
+  text-decoration: underline;
 }
 
 body {
@@ -133,13 +142,12 @@ nav > a:hover {
 
 /* flowers/Index.ejs */
 
-#viewEvent {
-  color: white;
-  padding: .7vmin;
-  padding: .7vmin 1.3vmin;
-  border-radius: 300px;
-  text-decoration: none;
-  background-color: var(--blue);
+
+
+
+
+.viewEvent {
+ text-decoration: none;
 }
 
 #viewEvent:hover {
