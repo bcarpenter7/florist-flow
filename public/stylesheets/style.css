@@ -30,7 +30,6 @@
 
 #editBtn:hover {
   color: var(--darkBlue);
-  text-decoration: underline;
 }
 
 body {
@@ -149,6 +148,10 @@ nav > a:hover {
 .viewEvent {
  text-decoration: none;
 }
+
+/* .viewEvent > * {
+  text-decoration: none;
+ } */
 
 #viewEvent:hover {
   text-align: center;

@@ -16,14 +16,17 @@
             
             <a href="/prices/<%= p.id %>/edit" id="editBtn">Edit</a>
         </div>
+
+        <a class="viewEvent" href="/prices/<%= p.id %>">
         <div id="itemsDatabase">
         <h2 class="indexAllLabel"><span id="special"><%= p.plantName %></span></h2>
         <br>
         <h2 class="indexAllLabel">Bundle Price: <span>$<%= p.price %></span></h2>
         <h2 class="indexAllLabel">Bundle: <span><%= p.bundle %> plants</span></h2>
-        </div>
-        
-        <a id="viewEvent" href="/prices/<%= p.id %>">View Plant</a>
+   
+    </div>
+</a>
+
         
     </div>
     <% }) %>
