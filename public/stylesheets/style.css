@@ -238,17 +238,15 @@ span {
 
 /* new */
 #btnDiv {
-  /* width: 100%; */
-  /* margin: 0 auto; */
+ 
 }
 
 #btnDiv > label {
-  text-align: none;
+  text-align: left;
 }
 
 #btnDiv > button {
   text-align: center;
-  margin-left: 10vmin;
 }
 
 .btnAdd {
@@ -288,7 +286,7 @@ text-transform: capitalize;
   width: 50vmin;
   margin: 0 auto;
   border: 3px solid gray;
-  padding: 1vmin;
+  padding: 1vmin 2vmin;
   border-radius: 5px;
 }
 
@@ -299,7 +297,8 @@ text-transform: capitalize;
 #newFlowerForm > label {
   margin: 1vmin 0 0vmin 0;
   width: 100%;
-  font-size: 1.5vmin;
+  font-size: 2vmin;
+  font-weight: 650;
 }
 
 #newFlowerForm  > input {
@@ -308,13 +307,14 @@ text-transform: capitalize;
 }
 
 .flex {
-  /* display: flex;
-  flex-direction: column; */
-  /* width: 100%; */
   gap: 4vmin;
   margin-top: 1vmin;
   margin-bottom: 1vmin;
   justify-content: center;
+}
+
+.flex > label {
+  font-weight: 650;
 }
 
 .flowerName {
@@ -424,9 +424,9 @@ text-transform: capitalize;
 
 /* Index Homepage */
 #homePageDiv {
-  width: 100vmin;
-  margin-left: 5%;
-  margin-top: 7%;
+  /* width: 100vmin; */
+  /* margin-left: 5%;
+  margin-top: 7%; */
   display: flex;
   gap: 15vmin;
 }

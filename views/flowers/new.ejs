@@ -3,7 +3,7 @@
 
 
 <form id="newFlowerForm" action="/flowers"  method="POST">
-   <h1>Create Your Bouquet</h1>
+   <h1>Create Your Bridal Bouquet</h1>
    <!-- <div id="newDiv"> -->
    <label>Name of Client </label><input type="text" name="name" required>
    <label>Date of Event</label> <input type="date" name="dateOfEvent" required>
@@ -14,7 +14,6 @@
    <% while(x < 4) {  %>
       <div class="flex">
          <label>Flower #<%= x %> </label>
-         
          <hr>
          <div>
             <label id="space">Name</label>
@@ -26,7 +25,10 @@
               <option value="Hydrangea">Hydrangea</option>
               <option value="Mum">Mum</option>
               <option value="Dahlia">Dahlia</option>
-              <option value="Ranunculus (White)"></option>
+              <option value="Ranunculus (White)">Ranunculus (White)</option>
+              <option value="Standard Rose (Quicksand)">Standard Rose (Quicksand)</option>
+              <option value="Garden Rose">Garden Rose</option>
+              <option value="Spray Rose (White)">Spray Rose (White)</option>
          </select>
          
          <input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
@@ -50,15 +52,24 @@
          x++
          let html = `
          <div class="flex" id="x${x}">
-            <label>Flower #${x}:</label>
-               <select name="flowerName" required>
+            <label>Flower #${x}</label>
+            <hr>
+         <div>
+            <label id="space">Name</label>
+            <label>Amount</label>
+         </div>
+               <select class="flowerName" name="flowerName" required>
                   <option value=""></option>
                   <option value="Rose">Rose</option>
                   <option value="Hydrangea">Hydrangea</option>
                   <option value="Mum">Mum</option>
                   <option value="Dahlia">Dahlia</option>
+                  <option value="Ranunculus (White)">Ranunculus (White)</option>
+                  <option value="Standard Rose (Quicksand)">Standard Rose (Quicksand)</option>
+                  <option value="Garden Rose">Garden Rose</option>
+                  <option value="Spray Rose (White)">Spray Rose (White)</option>
                </select>
-            <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
+            <input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
          </div>
       <% x++ %>
    `
@@ -90,12 +101,20 @@
 <% while(y < 3) {  %>
 
    <div class="flex">
-      <label>Greens #<%= y %>:</label>
-      <select name="greenName" required>
+      <label>Green #<%= y %></label>
+      <hr>
+      <div>
+      <label id="space">Name</label>
+      <label>Amount:</label>
+      </div>
+      <select name="greenName" class="flowerName" required>
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
+           <option value="Olive">Olive</option>   
+           <option value="Salah">Salah</option>   
+           <option value="Ruscus (Italian)">Ruscus (Italian)</option>  
       </select>
-      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount" required>
+      <input id="numberInput" type="number" name="greenAmount" required>
    </div>
 <% y++ %>
 <% } %>
@@ -118,12 +137,20 @@
       let html = `
 
       <div class="flex" id="y${y}">
-      <label>Greens #${y}:</label>
-      <select name="greenName" required>
+      <label>Green #${y}</label>
+      <hr>
+      <div>
+         <label id="space">Name</label>
+         <label>Amount:</label>
+      </div>
+      <select name="greenName" class="flowerName" required>
            <option value="Ivy">Ivy</option>
-           <option value="Dusty Miller">Dusty Miller</option>   
+           <option value="Dusty Miller">Dusty Miller</option> 
+           <option value="Olive">Olive</option>  
+           <option value="Salah">Salah</option>   
+           <option value="Ruscus (Italian)">Ruscus (Italian)</option>     
       </select>
-      <label>Amount:</label><input id="numberInput" type="number" name="greenAmount" required>
+      <input id="numberInput" type="number" name="greenAmount" required>
       </div>
 
       `

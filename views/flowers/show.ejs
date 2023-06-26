@@ -1,6 +1,4 @@
 
-
-
 <%- include('../partials/header') %>
 <script>let fl = flower.dateOfEvent.slice(0, 10)</script>
 
@@ -39,8 +37,8 @@
             <% flower.flowerName.forEach((f, i) => {  %>
                 <% let curPrice = price.find((e) => e.plantName === f).price %>
                 <% let bundle = price.find((e) => e.plantName === f).bundle %>
-                <% let perStem = curPrice / bundle %>
-                <% let allStems = flower.flowerAmount[i] * perStem %>
+                <% let perStem = Number((curPrice / bundle).toFixed(2)) %>
+                <% let allStems = Number((flower.flowerAmount[i] * perStem).toFixed(2)) %>
                 <% let bundlesNeeded = Math.ceil(flower.flowerAmount[i] / bundle) %>
                 <% total+= allStems %>
                 <tr>

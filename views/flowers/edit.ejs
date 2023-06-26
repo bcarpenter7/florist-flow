@@ -18,6 +18,10 @@
               <option value="Hydrangea">Hydrangea</option>
               <option value="Mum">Mum</option>
               <option value="Dahlia">Dahlia</option>
+              <option value="Ranunculus (White)">Ranunculus (White)</option>
+              <option value="Standard Rose (Quicksand)">Standard Rose (Quicksand)</option>
+              <option value="Garden Rose">Garden Rose</option>
+              <option value="Spray Rose (White)">Spray Rose (White)</option>
          </select>
          <label>Flower #<%= x %> Amount:</label><input type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>" min="0" max="400" required>
          </div>
@@ -48,6 +52,10 @@
                <option value="Hydrangea">Hydrangea</option>
                <option value="Mum">Mum</option>
                <option value="Dahlia">Dahlia</option>
+               <option value="Ranunculus (White)">Ranunculus (White)</option>
+               <option value="Standard Rose (Quicksand)">Standard Rose (Quicksand)</option>
+               <option value="Garden Rose">Garden Rose</option>
+               <option value="Spray Rose (White)">Spray Rose (White)</option>
             </select>
          <label>Flower #${x} Amount:</label><input type="number" name="flowerAmount" min="0" max="400" required>
       </div>
@@ -81,6 +89,10 @@ btnRemove.addEventListener('click', clickedRemove )
          <option value="<%= flower.greenName[y - 1] %>"><%= flower.greenName[y - 1] %></option>
          <option value="Ivy">Ivy</option>
          <option value="Dusty Miller">Dusty Miller</option>   
+         <option value="Olive">Olive</option>   
+         <option value="Salah">Salah</option>   
+         <option value="Ruscus (Italian)">Ruscus (Italian)</option>  
+
       </select>
       <label>Greens #<%= y %> Amount:</label><input type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>" min="0" max="400" required>
    </div>
@@ -112,6 +124,9 @@ btnRemove.addEventListener('click', clickedRemove )
            <option value=""></option>
            <option value="Ivy">Ivy</option>
            <option value="Dusty Miller">Dusty Miller</option>   
+           <option value="Olive">Olive</option>   
+           <option value="Salah">Salah</option>   
+           <option value="Ruscus (Italian)">Ruscus (Italian)</option>  
       </select>
       <label>Greens #${y} Amount:</label><input type="number" name="greenAmount" min="0" max="400"required>
       </div>
