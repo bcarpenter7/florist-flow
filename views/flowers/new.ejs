@@ -13,8 +13,14 @@
 
    <% while(x < 4) {  %>
       <div class="flex">
-         <label>Flower #<%= x %>: </label>
-         <select name="flowerName" required>
+         <label>Flower #<%= x %> </label>
+         
+         <hr>
+         <div>
+            <label id="space">Name</label>
+            <label>Amount</label>
+         </div>
+         <select class="flowerName" name="flowerName" required>
               <option value=""></option>
               <option value="Rose">Rose</option>
               <option value="Hydrangea">Hydrangea</option>
@@ -22,7 +28,8 @@
               <option value="Dahlia">Dahlia</option>
               <option value="Ranunculus (White)"></option>
          </select>
-         <label>Amount:</label><input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
+         
+         <input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
          </div>
 <% x++ %>
 <% } %>
