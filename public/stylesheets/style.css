@@ -130,12 +130,26 @@ nav > a:hover {
 #newFlowerForm {
   display: flex;
   flex-direction: column;
-  width: 60vmin;
+  width: 50vmin;
   margin: 0 auto;
+  border: 3px solid gray;
+  padding: 1vmin;
+  border-radius: 5px;
+}
+
+#newFlowerForm > h1 {
+  text-align: left;
 }
 
 #newFlowerForm > label {
   margin: 1vmin 0 0vmin 0;
+  width: 100%;
+  font-size: 1.5vmin;
+}
+
+#newFlowerForm  > input {
+  width: 20vmin;
+  font-size: 2vmin;
 }
 
 
