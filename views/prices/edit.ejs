@@ -5,16 +5,12 @@
    <label>Plant Name:</label><input type="text" name="plantName" value="<%= price.plantName %>" required>
    <label>Price Per Bundle:</label><input name="price" value="<%=price.price %>" required>
    <label>Plants Per bundle:</label><input type="text" name="bundle" value="<%=price.bundle %>" required>
-   <!-- <label>Flower or Green?</label><input type="text" name="isFlower" value="<%=price.isFlower %>" required> -->
-
    <label>Type:</label>
    <select type="text" name="isFlower" required>
       <option value="<%=price.isFlower %>"><%=price.isFlower %></option>
       <option value="Green">Green</option>
       <option value="Flower">Flower</option>
    </select>
-
-
 
    <button type="submit" id="newBtn">Save Changes</button>
 </form>
