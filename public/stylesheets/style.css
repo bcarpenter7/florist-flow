@@ -134,7 +134,9 @@ nav > a:hover {
 /* flowers/Index.ejs */
 
 
-
+#noOrders {
+  text-align: center;
+}
 
 
 .viewEvent {

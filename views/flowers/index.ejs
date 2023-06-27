@@ -2,7 +2,9 @@
 
 
 <h1 id="indexHeader">Orders</h1>
-
+<% if(!flowers[0]){ %>
+    <h2 id="noOrders">No orders yet. Click "New Event" at the top of the page to create a new order.</h2>
+<% } %>
 <% flowers.forEach(f => { %>
     
     <div id="containerIndexAll">
