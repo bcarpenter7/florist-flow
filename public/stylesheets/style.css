@@ -470,4 +470,8 @@ text-transform: capitalize;
 
 }
 
-
+#footerImg {
+  font-size: 1.1vmin;
+  color: gray;
+  text-align: center;
+}

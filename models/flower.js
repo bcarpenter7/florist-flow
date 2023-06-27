@@ -6,6 +6,7 @@ const flowerSchema = new Schema({
     name: String,
     dateOfEvent: String,
     location: String,
+    notes: String,
     flowerName: [{type: String}],
     flowerAmount: [{type: Number, min: 1, max: 99, required: true}],
     greenName: [{type: String}],

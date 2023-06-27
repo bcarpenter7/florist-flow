@@ -91,8 +91,6 @@ async function index(req, res){
         flowers: flowersAll,
         title: 'Flowers'
     }
-    console.log(flowersAll)
-    console.log(flowersAll[0].name)
     res.render('flowers/index', context)
 }
 

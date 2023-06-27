@@ -6,7 +6,10 @@ const priceSchema = new Schema({
     plantName: String,
     price: Number,
     bundle: Number,
-    isFlower: String
+    isFlower: String,
+    supplier: String,
+    supplierEmail: String,
+    notes: String
 })
 
 

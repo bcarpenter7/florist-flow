@@ -4,11 +4,10 @@
 
 <form id="newFlowerForm" action="/flowers"  method="POST">
    <h1>Create Your Arrangement</h1>
-   <!-- <div id="newDiv"> -->
    <label>Name of Client </label><input type="text" name="name" required>
    <label>Date of Event</label> <input type="date" name="dateOfEvent" required>
    <label>Location </label><input type="text" name="location" required>
-   <!-- </div> -->
+   <label>Notes:</label><textarea name="notes" cols="50" rows="5"></textarea>
    <% let x = 1; %>
 
    <% while(x < 4) {  %>

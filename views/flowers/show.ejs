@@ -8,6 +8,7 @@
         <label><span class="showTitles">Name:</span> <%=flower.name %></label>
         <label><span class="showTitles">Date of Event:</span> <%= flower.dateOfEvent %></label>
         <label><span class="showTitles">Location:</span> <%=flower.location %></label>
+        <label><span class="showTitles">Notes:</span> <%=flower.notes %></label>
 
         <% flower.flowerName.forEach((f, i) => {  %>
         <label><span class="showTitles">Flower #<%= i + 1%>:</span> <%=f %> (<%=flower.flowerAmount[i]  %>)</label>
