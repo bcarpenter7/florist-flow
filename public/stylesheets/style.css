@@ -429,25 +429,30 @@ text-transform: capitalize;
 
 /* Index Homepage */
 #homePageDiv {
-  /* width: 100vmin; */
-  /* margin-left: 5%; */
-  margin-top: 7%;
+  margin: 0 auto;
+  /* background-color: blue; */
+  margin-top: 7%; 
   display: flex;
-  gap: 15vmin;
+  gap: -25vmin;
+  height: 90vmin; 
 }
 
 .homepageImg {
-  width: 40vmin;
+  width: 30%;
+  height: 70%;
+  /* height: 50vmin; */
   transform: rotate(35deg);
 }
 
 .homepageImgOne {
-  width: 40vmin;
+  width: 30%;
+  height: 70%;
+
   transform: scaleX(-1) rotate(35deg);
 }
 
 #middle {
-  width: 50vmin;
+  width: 40%;
   text-align: center;
 }
 
@@ -455,12 +460,13 @@ text-transform: capitalize;
   font-size: 5vmin;
   color: var(--darkBlue);
   margin-bottom: 0;
-  width: 50vmin;
+
 }
 
 #homePageMessage {
   font-size: 3.5vmin;
   color: var(--blue);
+
 }
 
 
