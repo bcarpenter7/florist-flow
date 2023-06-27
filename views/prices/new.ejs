@@ -3,10 +3,14 @@
 
 <form id="newFlowerForm" action="/prices"  method="POST">
    <h1>Add A Plant To The Database</h1>
-   <label>Plant Name:</label><input type="text" name="plantName">
-   <label>Price Per Bundle:</label><input type="number" name="price">
-   <label>Bundle:</label><input type="number" name="bundle">
-   <label>Flower or Green?</label><input type="text" name="isFlower">
+   <label>Plant Name:</label><input type="text" name="plantName" required>
+   <label>Price Per Bundle:</label><input type="number" name="price" required>
+   <label>Bundle:</label><input type="number" name="bundle" required>
+   <label>Type:</label>
+   <select type="text" name="isFlower" required>
+      <option value="Green">Green</option>
+      <option value="Flower">Flower</option>
+   </select>
 
    <button type="submit" id="newBtn">Submit Order</button>
 </form>
