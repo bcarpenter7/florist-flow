@@ -34,10 +34,14 @@ async function update(req, res){
 }
 
 async function edit(req, res){
+    const pricesAll = await Price.find({})
+    console.log(pricesAll)
+
     const flower = await Flower.findById(req.params.id)
     const context = {
         flower,
-        errorMsg: "not working"
+        errorMsg: "not working",
+        prices : pricesAll
     }
     res.render('flowers/edit', context)
 }

@@ -139,11 +139,11 @@
          <label>Amount:</label>
       </div>
       <select name="greenName" class="flowerName" required>
-           <option value="Ivy">Ivy</option>
-           <option value="Dusty Miller">Dusty Miller</option> 
-           <option value="Olive">Olive</option>  
-           <option value="Salah">Salah</option>   
-           <option value="Ruscus (Italian)">Ruscus (Italian)</option>     
+           <option value=""></option>
+           <% prices.forEach(e => { %>
+            <% if(e.isFlower === "Flower" || e.isFlower === "flower"){ return } %>
+            <option value="<%= e.plantName %>"><%= e.plantName %></option>
+         <%  }) %>    
       </select>
       <input id="numberInput" type="number" name="greenAmount" required>
       </div>
