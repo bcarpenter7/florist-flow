@@ -4,11 +4,12 @@
 
 <h1>View Order: <span><%= price.plantName %></span></h1>
 <div id="showDiv">
+    <h1>Nothing</h1>
     <label><span class="showTitles">Plant Name:</span> <%=price.plantName %></label>
     <label><span class="showTitles">Price per bundle:</span> <%= price.price %></label>
     <label><span class="showTitles">Bundle:</span> <%=price.bundle %></label>
     <label><span class="showTitles">Type:</span> <%=price.isFlower %></label>
-    <a href="/prices/<%= price.id %>/edit">Edit Price Details</a>
+    <a href="/prices/<%= price.id %>/edit">Edit Price Details</a> 
 </div>
 
 
