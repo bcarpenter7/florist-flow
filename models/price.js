@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 const priceSchema = new Schema({
     plantName: String,
     price: Number,
-    bundle: Number
+    bundle: Number,
+    isFlower: String
 })
 
 

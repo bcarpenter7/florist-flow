@@ -20,15 +20,11 @@
             <label>Amount</label>
          </div>
          <select class="flowerName" name="flowerName" required>
-              <option value=""></option>
-              <option value="Rose">Rose</option>
-              <option value="Hydrangea">Hydrangea</option>
-              <option value="Mum">Mum</option>
-              <option value="Dahlia">Dahlia</option>
-              <option value="Ranunculus (White)">Ranunculus (White)</option>
-              <option value="Standard Rose (Quicksand)">Standard Rose (Quicksand)</option>
-              <option value="Garden Rose">Garden Rose</option>
-              <option value="Spray Rose (White)">Spray Rose (White)</option>
+            <option value=""></option>
+            <% prices.forEach(e => { %>
+               <% if(e.isFlower === "Green" || e.isFlower === "green"){ return } %>
+               <option value="<%= e.plantName %>"><%= e.plantName %></option>
+            <%  }) %>
          </select>
          
          <input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
@@ -58,17 +54,15 @@
             <label id="space">Name</label>
             <label>Amount</label>
          </div>
-               <select class="flowerName" name="flowerName" required>
-                  <option value=""></option>
-                  <option value="Rose">Rose</option>
-                  <option value="Hydrangea">Hydrangea</option>
-                  <option value="Mum">Mum</option>
-                  <option value="Dahlia">Dahlia</option>
-                  <option value="Ranunculus (White)">Ranunculus (White)</option>
-                  <option value="Standard Rose (Quicksand)">Standard Rose (Quicksand)</option>
-                  <option value="Garden Rose">Garden Rose</option>
-                  <option value="Spray Rose (White)">Spray Rose (White)</option>
-               </select>
+
+         <select class="flowerName" name="flowerName" required>
+            <option value=""></option>
+            <% prices.forEach(e => { %>
+               <% if(e.isFlower === "Green" || e.isFlower === "green"){ return } %>
+               <option value="<%= e.plantName %>"><%= e.plantName %></option>
+            <%  }) %>
+         </select>
+
             <input id="numberInput" type="number" name="flowerAmount" min="1" max="400" required>
          </div>
       <% x++ %>
@@ -108,12 +102,13 @@
       <label>Amount:</label>
       </div>
       <select name="greenName" class="flowerName" required>
-           <option value="Ivy">Ivy</option>
-           <option value="Dusty Miller">Dusty Miller</option>   
-           <option value="Olive">Olive</option>   
-           <option value="Salah">Salah</option>   
-           <option value="Ruscus (Italian)">Ruscus (Italian)</option>  
-      </select>
+
+         <option value=""></option>
+         <% prices.forEach(e => { %>
+            <% if(e.isFlower === "Flower" || e.isFlower === "flower"){ return } %>
+            <option value="<%= e.plantName %>"><%= e.plantName %></option>
+         <%  }) %>
+         </select>
       <input id="numberInput" type="number" name="greenAmount" required>
    </div>
 <% y++ %>

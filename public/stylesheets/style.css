@@ -425,8 +425,8 @@ text-transform: capitalize;
 /* Index Homepage */
 #homePageDiv {
   /* width: 100vmin; */
-  /* margin-left: 5%;
-  margin-top: 7%; */
+  /* margin-left: 5%; */
+  margin-top: 7%;
   display: flex;
   gap: 15vmin;
 }
