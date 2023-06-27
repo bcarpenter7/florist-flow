@@ -3,7 +3,7 @@
 
 
 <form id="newFlowerForm" action="/flowers"  method="POST">
-   <h1>Create Your Bridal Bouquet</h1>
+   <h1>Create Your Arrangement</h1>
    <!-- <div id="newDiv"> -->
    <label>Name of Client </label><input type="text" name="name" required>
    <label>Date of Event</label> <input type="date" name="dateOfEvent" required>
@@ -171,5 +171,7 @@ btnRemoveGreen.addEventListener('click', clickedRemoveGreen )
    <% if(errorMsg){ errorMsg = "Missing required fields"} %>
    <p id="errorMsg"><%= errorMsg %></p>
 </form>
+
+
 
 <%- include('../partials/footer') %>

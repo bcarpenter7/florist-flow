@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
-<h1>Edit Wedding Details</h1>
 
 <form id="newFlowerForm" action="/prices/<%= price.id %>?_method=PUT"  method="POST">
+   <h1>Edit Event Details</h1>
    <label>Plant Name:</label><input type="text" name="plantName" value="<%= price.plantName %>" required>
    <label>Price Per Bundle:</label><input name="price" value="<%=price.price %>" required>
    <label>Plants Per bundle:</label><input type="text" name="bundle" value="<%=price.bundle %>" required>
