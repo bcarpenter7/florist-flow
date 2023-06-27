@@ -102,6 +102,7 @@ h4 {
   display: flex;
   align-items: center;
   margin-top: -5vmin;
+  margin-left: -5vmin;
   gap: 7vmin;
 }
 

@@ -7,10 +7,14 @@
    <label>New Date of Event:</label><input type="date" name="dateOfEvent" value="<%=flower.dateOfWedding %>" required>
    <label>Location:</label><input type="text" name="location" value="<%=flower.location %>" required>
 
+   <script>
+      let x = 1;
+   </script>
+
    <% let x = 1; %>
 
    <% while(x < flower.flowerName.length + 1) {  %>
-      <div class="flex">
+      <div class="flex" id="x<%= x%>">
          <label>Flower #<%= x %></label>
          <hr>
          <div>
@@ -27,6 +31,9 @@
 
          <input type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>" min="0" max="400" required>
          </div>
+         <script>
+            x++
+            </script>
 <% x++ %>
 <% } %>
 
@@ -38,7 +45,8 @@
 
 <script>
    let btn = document.getElementById('btnAddFlower')
-   let x = flower.flowerName.length;
+   x--
+   // console.log(`${flower.flowerName.length}`)
    console.log(x)
    const clicked = function(e){
       // let val = document.getElementById('unique').value
@@ -80,16 +88,20 @@ const clickedRemove = function(e){
    e.preventDefault()
    document.getElementById(`x${x}`).remove()
    x--
+   
 }
 btnRemove.addEventListener('click', clickedRemove )
 </script>
 
+<script>
+   let y = 1;
+</script>
 
 <% let y = 1; %>
 
 <% while(y < 3) {  %>
 
-   <div class="flex">
+   <div class="flex" id="y<%= y%>">
       <label>Green #<%= y %></label>
       <hr>
       <div>
@@ -106,6 +118,9 @@ btnRemove.addEventListener('click', clickedRemove )
       </select>
       <input type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>" min="0" max="400" required>
    </div>
+   <script>
+      y++
+   </script>
 <% y++ %>
 <% } %>
 
@@ -119,7 +134,7 @@ btnRemove.addEventListener('click', clickedRemove )
 
 <script>
    let btnGreen = document.getElementById('btnAddGreen')
-   let y = 2;
+   y--
    const clickedGreen = function(e){
       // let val = document.getElementById('unique').value
       e.preventDefault()
