@@ -110,14 +110,36 @@ h4 {
   gap: 7vmin;
 }
 
+@media only screen and (max-width: 600px) {
+  #navOne {
+  margin-top: -10vmin;
+  margin-left: -10vmin;
+  gap: 2.5vmin;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+#navImg {
+  width: 15vmin;
+  margin-left: -1vmin;
+}
+}
 
 #navTwo {
   display: flex;
   gap: 6vmin;
   margin-top: -5vmin;
+  margin-left: 5vmin;
   align-items: center;
   justify-self: end;
 }
+
+@media only screen and (max-width: 600px) {
+  #navTwo {
+    margin-top: -10vmin;
+    margin-left: 3vmin;
+  }
+  }
 
 nav > a {
   text-decoration: none;
@@ -249,9 +271,7 @@ span {
 
 
 /* new */
-#btnDiv {
- 
-}
+
 
 #btnDiv > label {
   text-align: left;
@@ -300,6 +320,18 @@ text-transform: capitalize;
   border: 3px solid gray;
   padding: 1vmin 2vmin;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 480px){
+  #newFlowerForm {
+    display: flex;
+    flex-direction: column;
+    width: 65vmin;
+    margin: 0 auto;
+    border: 3px solid gray;
+    padding: 1vmin 2vmin;
+    border-radius: 5px;
+  }
 }
 
 #newFlowerForm > h1 {
@@ -453,16 +485,48 @@ text-transform: capitalize;
 .homepageImg {
   width: 30%;
   height: 70%;
-  /* height: 50vmin; */
   transform: rotate(35deg);
 }
 
 .homepageImgOne {
   width: 30%;
   height: 70%;
-
   transform: scaleX(-1) rotate(35deg);
 }
+
+@media only screen and (max-width: 600px) {
+  .homepageImg {
+    width: 30%;
+    height: 40%;
+    transform: rotate(35deg);
+    margin-right: -5vmin;
+  }
+
+  .homepageImgOne {
+    width: 30%;
+    height: 40%;
+    transform: scaleX(-1) rotate(35deg);
+    /* margin-left: -5vmin; */
+  }
+}
+
+@media only screen and (max-width: 1175px) {
+  .homepageImg {
+    width: 30%;
+    height: 40%;
+    transform: rotate(35deg);
+    margin-right: -5vmin;
+  }
+
+  .homepageImgOne {
+    width: 30%;
+    height: 40%;
+    transform: scaleX(-1) rotate(35deg);
+    /* margin-left: -5vmin; */
+  }
+}
+
+
 
 #middle {
   width: 40%;
