@@ -29,7 +29,7 @@
             <%  }) %>
          </select>
 
-         <input type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>" min="0" max="400" required>
+         <input id="numberInput" type="number" name="flowerAmount" value="<%= flower.flowerAmount[x - 1] %>" min="0" max="400" required>
          </div>
          <script>
             x++
@@ -71,7 +71,7 @@
             <%  }) %>
   
       </select>
-         <input type="number" name="flowerAmount" min="0" max="400" required>
+         <input id="numberInput" type="number" name="flowerAmount" min="0" max="400" required>
       </div>
    <% x++ %>
 `
@@ -116,7 +116,7 @@ btnRemove.addEventListener('click', clickedRemove )
             <option value="<%= e.plantName %>"><%= e.plantName %></option>
          <%  }) %>
       </select>
-      <input type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>" min="0" max="400" required>
+      <input id="numberInput" type="number" name="greenAmount" value="<%= flower.greenAmount[y - 1] %>" min="0" max="400" required>
    </div>
    <script>
       y++
@@ -157,7 +157,7 @@ btnRemove.addEventListener('click', clickedRemove )
             <option value="<%= e.plantName %>"><%= e.plantName %></option>
          <%  }) %>  
       </select>
-      <input type="number" name="greenAmount" min="0" max="400"required>
+      <input id="numberInput" type="number" name="greenAmount" min="0" max="400"required>
       </div>
 
       `
