@@ -4,7 +4,7 @@
 <form id="newFlowerForm" action="/prices"  method="POST">
    <h1>Add A Plant To The Database</h1>
    <label>Plant Name:</label><input type="text" name="plantName" required>
-   <label>Price Per Bundle:</label><input type="number" name="price" required>
+   <label>Price Per Bundle:</label><input type="number" name="price" step="0.01" pattern="^\d*(\.\d{1,2})?$" required>
    <label>Bundle:</label><input type="number" name="bundle" required>
    <label>Type:</label>
    <select type="text" name="isFlower" required>

@@ -3,8 +3,8 @@
 <form id="newFlowerForm" action="/prices/<%= price.id %>?_method=PUT"  method="POST">
    <h1>Edit Database Details</h1>
    <label>Plant Name:</label><input type="text" name="plantName" value="<%= price.plantName %>" required>
-   <label>Price Per Bundle:</label><input name="price" value="<%=price.price %>" required>
-   <label>Plants Per bundle:</label><input type="text" name="bundle" value="<%=price.bundle %>" required>
+   <label>Price Per Bundle:</label><input name="price" type="number" value="<%=price.price %>" min="1" step="0.01" pattern="^\d*(\.\d{1,2})?$" required>
+   <label>Stems Per bundle:</label><input type="text" name="bundle" value="<%=price.bundle %>" required>
    <label>Type:</label>
    <select type="text" name="isFlower" required>
       <option value="<%=price.isFlower %>"><%=price.isFlower %></option>

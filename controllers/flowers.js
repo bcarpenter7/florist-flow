@@ -75,7 +75,7 @@ async function create(req, res){
 /// Made it async in change
 async function newFlower(req, res){
     const pricesAll = await Price.find({}).sort({"plantName": 1})
-
+    console.log(pricesAll)
     res.render('flowers/new', {
         errorMsg: '',
         title: 'New Flower',
