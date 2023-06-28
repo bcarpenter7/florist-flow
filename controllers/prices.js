@@ -77,7 +77,7 @@ function newPrice(req, res){
 
 
 async function index(req, res){
-    const pricesAll = await Price.find({})
+    const pricesAll = await Price.find({}).sort({"plantName": 1})
     const context = {
         prices: pricesAll,
         title: 'Prices'

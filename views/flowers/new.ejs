@@ -20,7 +20,9 @@
          </div>
          <select class="flowerName" name="flowerName" required>
             <option value=""></option>
+            
             <% prices.forEach(e => { %>
+      
                <% if(e.isFlower === "Green" || e.isFlower === "green"){ return } %>
                <option value="<%= e.plantName %>"><%= e.plantName %></option>
             <%  }) %>

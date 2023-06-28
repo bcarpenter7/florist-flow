@@ -34,7 +34,7 @@ async function update(req, res){
 }
 
 async function edit(req, res){
-    const pricesAll = await Price.find({})
+    const pricesAll = await Price.find({}).sort({"plantName": 1})
     console.log(pricesAll)
 
     const flower = await Flower.findById(req.params.id)
@@ -74,8 +74,7 @@ async function create(req, res){
 
 /// Made it async in change
 async function newFlower(req, res){
-    const pricesAll = await Price.find({})
-    console.log(pricesAll)
+    const pricesAll = await Price.find({}).sort({"plantName": 1})
 
     res.render('flowers/new', {
         errorMsg: '',
