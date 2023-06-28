@@ -187,11 +187,18 @@ span {
   color: var(--black);
 }
 
+@media only screen and (max-width: 600px){
+  .indexAllLabel {
+font-size: 4vmin;
+  }
+}
+
 
 .indexAllLabel {
   color:var(--mediumGreen);
   text-align: left;
 }
+
 
 #containerIndexAll {
   border: 3px solid gray;
