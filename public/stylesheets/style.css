@@ -53,6 +53,10 @@ label {
   text-align: center;
 }
 
+table > * {
+  font-size: 2.2vmin;
+}
+
 .deleteBtn {
   background-color: var(--olive);
   border-radius: 5px;
@@ -193,6 +197,11 @@ span {
 
 
 /* show */
+
+.align {
+  margin-left: 108vmin;
+}
+
 #showDiv {
   display: flex;
   flex-direction: column;
@@ -203,12 +212,12 @@ span {
 
 #showDiv > label {
   font-weight: bold;
-  font-size: 1.8vmin;
+  font-size: 2.5vmin;
   margin-bottom: .5vmin;
 }
 
 .showTitles {
-  font-size: 2vmin;
+  font-size: 2.5vmin;
   font-weight: bold;
   color: var(--mediumGreen);
 }

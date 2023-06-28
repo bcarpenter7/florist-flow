@@ -1,6 +1,5 @@
 
 <!-- 
-    Get rid of flower/greens at top
     Get rid of flower/greens at bottom
     Plant names are more imortant
     Price per stem / Total don't matter
@@ -13,7 +12,13 @@
 <script>let fl = flower.dateOfEvent.slice(0, 10)</script>
 
 
-    <h1>View Order: <span><%= flower.name %></span></h1>
+    <h1>Order Details</h1>
+    <a id="editBtn" class="align" href="/flowers/<%= flower.id %>/edit"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="2vmin" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+            </svg>
+                Edit Event Details</a>
+
     <div id="showDiv">
         <label><span class="showTitles">Name:</span> <%=flower.name %></label>
         <label><span class="showTitles">Date of Event:</span> <%= flower.dateOfEvent %></label>
@@ -21,11 +26,7 @@
         <label><span class="showTitles">Notes:</span> <%=flower.notes %></label>
 
     
-        <a id="editBtn" href="/flowers/<%= flower.id %>/edit"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="2vmin" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-            </svg>
-                Edit Event Details</a>
+        
     </div>
 
     <div id="priceDiv">
@@ -34,39 +35,44 @@
             <% let total = 0; %>
         <table id="priceBreakdownTable">
             <tr>
-              <th>Selection</th>
               <th>Plant Name</th>
               <th class="centerText">Stems</th>
-              <th class="centerText">Price Per Stem</th>
-              <th class="centerText">Total</th>
               <th class="centerText">Bundles Needed</th>
+              <th class="centerText">Price Per Bundle</th>
+              <th class="centerText">Total Bundle Price</th>
+            
             </tr>
-            <% console.log(flower.flowerName) %>
             <% flower.flowerName.forEach((f, i) => {  %>
                 <% let curPrice = price.find((e) => e.plantName === f).price %>
-                <% let bundle = price.find((e) => e.plantName === f).bundle %>
-                <% let perStem = Number((curPrice / bundle).toFixed(2)) %>
+                <% let bundleAmount = price.find((e) => e.plantName === f).bundle %>
+                <% let perStem = Number((curPrice / bundleAmount).toFixed(2)) %>
                 <% let allStems = Number((flower.flowerAmount[i] * perStem).toFixed(2)) %>
-                <% let bundlesNeeded = Math.ceil(flower.flowerAmount[i] / bundle) %>
-                <% total+= allStems %>
+                <% let bundlesNeeded = Math.ceil(flower.flowerAmount[i] / bundleAmount) %>
+                <% let bundlePrice = bundlesNeeded * curPrice %>
+                <% total+= bundlePrice %>
+
                 <tr>
-                    <td><span class="showTitles">Flower #<%= i + 1 %></span></td>
                     <td><%=f %></td>
                     <td class="centerText"><%=flower.flowerAmount[i] %></td>
-                    <td class="centerText">$<%= perStem %></td>   
-                    <td class="centerText">$<%= allStems %></td>
-                    <td class="centerText"><%= bundlesNeeded %> (<%= bundle %>)</td>
+                    <td class="centerText"><%= bundlesNeeded %></td>   
+                    <td class="centerText">$<%= curPrice %></td>
+                    <td class="centerText">$<%= bundlePrice %> (<%= bundlesNeeded %>)</td>
                 </tr>
            <% }) %>
 
            <% flower.greenName.forEach((g, i) => {  %>
             <% let curPriceGreen = price.find((e) => e.plantName === g).price %>
+            <% let bundleAmountGreen = price.find((e) => e.plantName === g).bundle %>
+            <% let bundlesNeededGreen = Math.ceil(flower.greenAmount[i] / bundleAmountGreen) %>
+            <% let bundlePriceGreen = bundlesNeededGreen * curPriceGreen %>
+            <% total+= bundlePriceGreen %>
+
             <tr>
-                <td><span class="showTitles">Green #<%= i + 1 %></span></td>
                 <td><%=g %></td>
                 <td class="centerText"><%=flower.greenAmount[i] %></td>
-                <td class="centerText">$<%= curPriceGreen %></td>   
-                <td class="centerText">$<%=flower.greenAmount[i] * curPriceGreen %> <% total+= flower.greenAmount[i] * curPriceGreen %></td>
+                <td class="centerText"><%= bundlesNeededGreen%></td>   
+                <td class="centerText">$<%= curPriceGreen %></td>
+                <td class="centerText">$<%= bundlePriceGreen %> (<%= bundlesNeededGreen %>)</td>
             </tr>
        <% }) %>
         </table>
