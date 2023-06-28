@@ -388,8 +388,9 @@ text-transform: capitalize;
 /* Prices */
 
 #addPlant {
-  margin-left: -2vmin;
+  margin-left: 28vmin;
 }
+
 #plantDiv {
   margin-left: 52vmin;
   margin-bottom: 2vmin;
