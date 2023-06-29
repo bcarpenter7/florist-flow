@@ -280,6 +280,163 @@ font-size: 4vmin;
 
 
 
+
+
+@media only screen and (max-width: 2000px){
+
+  /* Edit button on show is align */
+  .align {
+    margin-left: 105vmin;
+    font-size: 3vmin;
+  }
+  
+  #showDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80vmin;
+    margin: 0 auto;
+    /* margin-left: 2vmin; */
+  }
+  
+  #showDiv > label {
+    font-weight: bold;
+    font-size: 3.5vmin;
+    margin-bottom: .5vmin;
+  }
+
+  .showTitles {
+    font-size: 3.5vmin;
+  }
+
+  #priceDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100vmin;
+    margin: 0 auto;
+    /* margin-left: 2vmin; */
+  }
+  
+  #priceDiv > label {
+    font-weight: bold;
+    font-size: 3vmin;
+    margin-bottom: 5vmin;
+  }
+  
+  #priceBreakdownTable {
+    border: 3px solid var(--black);
+    padding: 1vmin;
+  }
+
+  #priceTitle {
+    font-size: 3vmin;
+
+  }
+}
+
+@media only screen and (max-width: 1215px){
+
+  /* Edit button on show is align */
+  .align {
+    margin-left: 55vmin;
+    font-size: 3vmin;
+  }
+  
+  #showDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80vmin;
+    margin: 0 auto;
+    margin-left: 2vmin;
+  }
+  
+  #showDiv > label {
+    font-weight: bold;
+    font-size: 4.5vmin;
+    margin-bottom: .5vmin;
+  }
+
+  .showTitles {
+    font-size: 4.5vmin;
+  }
+
+  #priceDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80vmin;
+    margin: 0 auto;
+    margin-left: 2vmin;
+  }
+  
+  #priceDiv > label {
+    font-weight: bold;
+    font-size: 3vmin;
+    margin-bottom: 5vmin;
+  }
+  
+  #priceBreakdownTable {
+    border: 3px solid var(--black);
+    padding: 1vmin;
+  }
+
+  #priceTitle {
+    font-size: 3vmin;
+
+  }
+}
+
+@media only screen and (max-width: 500px){
+
+  /* Edit button on show is align */
+  .align {
+    margin-left: 40vmin;
+    font-size: 3vmin;
+  }
+  
+  #showDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80vmin;
+    margin: 0 auto;
+    margin-left: -5vmin;
+  }
+  
+  #showDiv > label {
+    font-weight: bold;
+    font-size: 4.5vmin;
+    margin-bottom: .5vmin;
+  }
+
+  .showTitles {
+    font-size: 4.5vmin;
+  }
+
+  #priceDiv {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80vmin;
+    margin: 0 auto;
+    margin-left: -5vmin;
+  }
+  
+  #priceDiv > label {
+    font-weight: bold;
+    font-size: 3vmin;
+    margin-bottom: 5vmin;
+  }
+  
+  #priceBreakdownTable {
+    border: 3px solid var(--black);
+    padding: 1vmin;
+  }
+
+}
+
 /* show */
 
 
