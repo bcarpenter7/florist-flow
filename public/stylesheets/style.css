@@ -279,9 +279,6 @@ font-size: 4vmin;
 
 
 
-
-
-
 @media only screen and (max-width: 2000px){
 
   /* Edit button on show is align */
@@ -676,7 +673,7 @@ text-transform: capitalize;
 /* new */
 
 
-/* Prices */
+/* Prices Index */
 
 #addPlant {
   margin-left: 28vmin;
@@ -729,6 +726,58 @@ text-transform: capitalize;
   font-size: 3.5vmin;
   text-decoration: underline;
 }
+
+
+
+
+@media only screen and (max-width: 1200px){
+
+  #plantDiv {
+    margin-left: 20vmin;
+    margin-bottom: 2vmin;
+    text-align: center;
+  }
+  
+  #containerDatabase {
+    border: 3px solid gray;
+    width: 85vmin;
+    padding: 1vmin 2vmin;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding-bottom: 2vmin;
+    margin-bottom: 1vmin;
+    text-align: right;
+  }
+
+
+}
+
+@media only screen and (max-width: 500px){
+
+  #plantDiv {
+    margin-left: -70vmin;
+    margin-bottom: 2vmin;
+    text-align: center;
+  }
+  
+  #containerDatabase {
+    border: 3px solid gray;
+    width: 85vmin;
+    padding: 1vmin 2vmin;
+    border-radius: 5px;
+
+    /* margin: 0 auto; */
+    margin-left: -10vmin;
+    padding-bottom: 2vmin;
+    margin-bottom: 1vmin;
+    text-align: right;
+  }
+
+
+}
+
+
+
 /* Prices */
 
 /* Index Homepage */
