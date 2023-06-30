@@ -4,7 +4,7 @@
 <br>
 
 <h2>Screenshots</h2>
-<img width="321" alt="Screenshot 2023-06-30 at 7 31 09 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/1d19941f-33b4-449d-a03d-f7b60a9d21bc">
+<img width="461" alt="Screenshot 2023-06-30 at 7 31 09 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/1d19941f-33b4-449d-a03d-f7b60a9d21bc">
 <br>
 <img width="462" alt="Screenshot 2023-06-30 at 7 31 56 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/f58e2e96-9692-4038-8528-22878ab1fa26">
 <br>
