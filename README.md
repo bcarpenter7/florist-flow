@@ -15,7 +15,12 @@
 https://crud-flower.fly.dev/
 
 <h2>User Stories</h2>
-Based on user stories from a local florist, the app was created to help florists calculate costs and flower needs for an event. The user wanted to be able to create an "event" that stored the information needed to prepare for an event. Inside the event, the user wanted the ability to change the prices based on their personal supplier. The user also needed a way to calculate how many bundles of flowers were needed per event since flowers are sold in different bundle amounts (Bundles refer to how many stems are sold at a certain price).
+Based on user stories from a local florist, the app was created to calculate costs and flower needs for an event. The user wanted to be able to create an "event" that stored the information needed to prepare for an event. Inside the event, the user wanted the ability to change the prices based on their personal supplier. The user also needed a way to calculate how many bundles of flowers were needed per event since flowers are sold in different bundle amounts (Bundles refer to how many stems are sold at a certain price).
+
+<h2>Features</h2>
+  <h3>Customizable Database</h3> <p>Users can enter their personal flower information such as price, stems per bundle, supplier info, and notes</p>
+  <h3>Price Calculation Tool</h3> <p>Users can view their event and get a full price breakdown of the event based on their personal information in their plant database</p>
+  <h3>Create Event</h3> <p>Users can create an event and choose the flowers/greens needed using a dropdown menu that is connected to their personal plant database</p>
 
 <h2>Next Steps:</h2>
 
