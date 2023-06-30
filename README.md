@@ -1,6 +1,6 @@
-Florist Flow
+<strong>Florist Flow<strong>
 
-Technologies Used: Javascript, HTML, CSS, Express.js, Node.js, MongoDb
+<strong>Technologies Used:<strong> Javascript, HTML, CSS, Express.js, Node.js, MongoDb
 
 
 <img width="321" alt="Screenshot 2023-06-30 at 7 31 09 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/1d19941f-33b4-449d-a03d-f7b60a9d21bc">
