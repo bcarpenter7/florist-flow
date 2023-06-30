@@ -21,7 +21,7 @@ Based on user stories from a local florist, the app was created to calculate cos
   <h3>Customizable Database</h3> <p>Users can enter their personal flower information such as price, stems per bundle, supplier info, and notes</p>
   <h3>Price Calculation Tool</h3> <p>Users can view their event and get a full price breakdown of the event based on their personal information in their plant database</p>
   <h3>Create Event</h3> <p>Users can create an event and choose the flowers/greens needed using a dropdown menu that is connected to their personal plant database</p>
-
+  <h3>Responsive Design</h3> <p>Users can use the application on any device and the app should scale to improve the user experience</p>
 <h2>Next Steps:</h2>
 
 Providing more types of bouquets to create in the New Event section. This would allow the user to create an event encompassing all the flower needs in an event.
