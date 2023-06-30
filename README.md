@@ -1,7 +1,7 @@
 <h1>Florist Flow</h1>
 
 <h2>Technologies Used:</h2> Javascript, HTML, CSS, Express.js, Node.js, MongoDb
-
+<br>
 
 <img width="321" alt="Screenshot 2023-06-30 at 7 31 09 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/1d19941f-33b4-449d-a03d-f7b60a9d21bc">
 <br>
@@ -14,6 +14,6 @@
 
 https://crud-flower.fly.dev/
 
-Next Steps:
+<h2>Next Steps:</h2>
 
 Providing more types of bouquets to create in the New Event section. This would allow the user to create an event encompassing all the flower needs in an event.
