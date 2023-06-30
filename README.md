@@ -1,6 +1,6 @@
-<strong>Florist Flow<strong>
+<h1>Florist Flow</h1>
 
-<strong>Technologies Used:<strong> Javascript, HTML, CSS, Express.js, Node.js, MongoDb
+<h2>Technologies Used:</h2> Javascript, HTML, CSS, Express.js, Node.js, MongoDb
 
 
 <img width="321" alt="Screenshot 2023-06-30 at 7 31 09 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/1d19941f-33b4-449d-a03d-f7b60a9d21bc">
@@ -10,7 +10,7 @@
 <img width="461" alt="Screenshot 2023-06-30 at 7 32 18 AM" src="https://github.com/bcarpenter7/minesweeper-easy/assets/126187218/589d7b16-b40f-4ecf-b455-030f44c9d339">
 
 
-Getting Started: 
+<h2>Getting Started:</h2>
 
 https://crud-flower.fly.dev/
 
