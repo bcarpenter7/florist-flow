@@ -116,20 +116,7 @@ h4 {
   gap: 7vmin;
 }
 
-@media only screen and (max-width: 600px) {
-  #navOne {
-  margin-top: -10vmin;
-  margin-left: -10vmin;
-  gap: 2.5vmin;
-  }
-}
 
-@media only screen and (max-width: 600px) {
-#navImg {
-  width: 15vmin;
-  margin-left: -1vmin;
-}
-}
 
 #navTwo {
   display: flex;
@@ -141,11 +128,22 @@ h4 {
 }
 
 @media only screen and (max-width: 600px) {
+  #navOne {
+    margin-top: -10vmin;
+    margin-left: -10vmin;
+    gap: 6.5vmin;
+  }
+
+  #navImg {
+    width: 15vmin;
+    margin-left: -1vmin;
+  }
+
   #navTwo {
     margin-top: -10vmin;
-    margin-left: 3vmin;
+    margin-left: 6.5vmin;
   }
-  }
+}
 
 nav > a {
   text-decoration: none;
@@ -727,9 +725,6 @@ text-transform: capitalize;
   text-decoration: underline;
 }
 
-
-
-
 @media only screen and (max-width: 1200px){
 
   #plantDiv {
@@ -858,4 +853,14 @@ text-transform: capitalize;
   font-size: 1.1vmin;
   color: gray;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px){
+  #footerImg {
+    padding-top: 90vmin;
+    font-size: 2vmin;
+    position: absolute;
+  }
+
+
 }

@@ -1,13 +1,4 @@
 
-<!-- 
-    Get rid of flower/greens at bottom
-    Plant names are more imortant
-    Price per stem / Total don't matter
-    Price per bundle / Total per bundle more important
- -->
-
-
-
 <%- include('../partials/header') %>
 <script>let fl = flower.dateOfEvent.slice(0, 10)</script>
 
@@ -23,10 +14,7 @@
         <label><span class="showTitles">Name:</span> <%=flower.name %></label>
         <label><span class="showTitles">Date of Event:</span> <%= flower.dateOfEvent %></label>
         <label><span class="showTitles">Location:</span> <%=flower.location %></label>
-        <label><span class="showTitles">Notes:</span> <%=flower.notes %></label>
-
-    
-        
+        <label><span class="showTitles">Notes:</span> <%=flower.notes %></label>  
     </div>
 
     <div id="priceDiv">
